@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Trend Mart — Ecommerce Project Case Study | Arya Mehta</title>
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center dark-background sticky-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../portfolio.html" class="active">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main class="main">
+
+    <!-- Hero -->
+    <section class="project-hero section" style="background: linear-gradient(135deg, #0d0d0f, #1a1a22); color: white; padding: 80px 0;">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h1 class="fw-bold mb-3">Trend Mart — Ecommerce Store</h1>
+            <p class="lead mb-4">A modern and feature-rich e-commerce platform built using the MERN Stack (MongoDB, Express, React, Node.js). Trend Mart provides users with a real-time shopping experience, secure authentication, product management, and admin control — all in one place.</p>
+            <div class="d-flex gap-3">
+              <a href="https://github.com/aryamehta0302/EcommerceStore" target="_blank" class="btn btn-primary">
+                <i class="bi bi-github"></i> View on GitHub
+              </a>
+              <a href="#features" class="btn btn-outline-light">
+                <i class="bi bi-arrow-down"></i> Explore Project
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 text-center" data-aos="zoom-in">
+            <img src="../assets/img/projects/mern.png" class="img-fluid rounded shadow-lg" alt="Trend Mart Screenshot">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- Highlights -->
+    <section id="features" class="section mt-5">
+      <div class="container">
+
+        <h2 class="text-center mb-4" data-aos="fade-up">Project Highlights</h2>
+        <p class="text-center mb-5" data-aos="fade-up">Trend Mart combines modern UI, real-time performance, and secure backend infrastructure to simulate a complete online store environment.</p>
+
+        <div class="row g-4">
+
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-shield-lock fs-2 mb-2"></i>
+              <h5>JWT Authentication</h5>
+              <p>Implemented secure login and signup using JSON Web Tokens (JWT) and bcrypt for password encryption. Users and admins have separate access privileges, ensuring data integrity and restricted controls.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-bag-check fs-2 mb-2"></i>
+              <h5>Product Management</h5>
+              <p>Admin users can create, update, and delete products, along with managing categories, pricing, images, and stock. CSV data was seeded automatically into MongoDB using Node.js for scalability testing.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-cart fs-2 mb-2"></i>
+              <h5>Cart & Wishlist</h5>
+              <p>Dynamic cart with real-time quantity updates, total calculations, and persistent data storage using localStorage. Includes wishlist functionality to enhance the user shopping experience.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Highlights -->
+
+    <!-- Architecture -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">System Architecture</h2>
+
+        <img src="../assets/img/projects/trendmart-flow.png"
+             class="img-fluid rounded mx-auto d-block shadow-sm mb-4"
+             alt="Architecture Diagram"
+             data-aos="zoom-in">
+
+        <ul class="lead" data-aos="fade-up">
+          <li>📌 <strong>Frontend:</strong> Built using React (Vite) with Bootstrap 5 and Axios for API communication. Dark mode and responsive design implemented for a seamless experience across devices.</li>
+          <li>📌 <strong>Backend:</strong> RESTful APIs powered by Node.js and Express.js with modular routes for products, users, and orders.</li>
+          <li>📌 <strong>Database:</strong> MongoDB Atlas for scalable and secure cloud data storage, integrated using Mongoose ORM.</li>
+          <li>📌 <strong>Authentication:</strong> JWT-based token management ensures secure sessions and role-based route protection.</li>
+          <li>📌 <strong>Deployment:</strong> Backend deployed on Render, frontend hosted on Vercel for optimized performance and global reach.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Development Journey</h2>
+        <p class="lead" data-aos="fade-up">
+          Trend Mart was developed as a real-world simulation of a professional e-commerce platform. The development process included backend API design, authentication setup, and dynamic UI creation.
+        </p>
+        <p class="lead" data-aos="fade-up">
+          The application features full CRUD operations, live search, product filters, and payment options. It integrates UPI & Visa payment methods and generates order receipts dynamically using PDFKit. The admin dashboard offers real-time control over users, products, and orders with secure access management.
+        </p>
+        <p class="lead" data-aos="fade-up">
+          Dark mode support, toast notifications, and responsive design were implemented to enhance user experience. Finally, the project was deployed using a dual-service structure: the backend via Render and the frontend via Vercel.
+        </p>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Screenshots</h2>
+        <div class="row g-4">
+          <div class="col-lg-6" data-aos="fade-up">
+            <a href="../assets/img/projects/trendmart-1.png" class="glightbox">
+              <img src="../assets/img/projects/trendmart-1.png" class="img-fluid rounded shadow-sm" alt="Trend Mart UI">
+            </a>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <a href="../assets/img/projects/trendmart-2.png" class="glightbox">
+              <img src="../assets/img/projects/trendmart-2.png" class="img-fluid rounded shadow-sm" alt="Trend Mart Dashboard">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub CTA -->
+    <section class="section text-center">
+      <h3 data-aos="fade-up">Want to explore the code?</h3>
+      <p class="mb-4" data-aos="fade-up">The complete source code for both frontend and backend — including authentication, Redux store, and REST API — is available on GitHub.</p>
+      <a href="https://github.com/aryamehta0302/EcommerceStore" target="_blank" class="btn btn-primary btn-lg">
+        <i class="bi bi-github"></i> Open GitHub Repository
+      </a>
+      <div class="mt-4" data-aos="fade-up">
+        <a href="https://ecommerce-store-drab-pi.vercel.app" target="_blank" class="btn-live-demo btn-lg">
+  <i class="bi bi-box-arrow-up-right"></i> Live Demo — TrendMart
+</a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="container text-center">
+      <p>© <strong class="sitename">Arya Mehta</strong> — All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

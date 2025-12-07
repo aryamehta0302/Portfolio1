@@ -1,16 +1,4 @@
-/**
-* Template Name: FolioOne
-* Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
-* Updated: Aug 23 2025 with Bootstrap v5.3.7
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
@@ -2853,3 +2841,48 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+
+.btn-view-more {
+  background: #0d6efd;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-view-more:hover {
+  background: #084ac1;
+  color: #fff;
+  transform: translateX(4px);
+}
+.btn-view-more i {
+  transition: 0.25s;
+}
+
+.btn-view-more:hover i {
+  transform: translateX(6px);
+}
+/* Live Demo Button (clean professional style) */
+.btn-live-demo {
+  background: #0d6efd;
+  color: #fff !important;
+  font-weight: 600;
+  padding: 11px 24px;
+  border-radius: 8px;
+  border: none;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.btn-live-demo:hover {
+  background: #0b5ed7;
+  transform: translateY(-2px);
+}
+  .project-screenshot {
+      width: 100%;
+      height: 420px;              /* fixed height */
+      object-fit: cover;          /* crops evenly without distortion */
+      border-radius: 12px;
+  }

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>AIML Department Chatbot — Project Case Study | Arya Mehta</title>
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center dark-background sticky-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../portfolio.html" class="active">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main class="main">
+
+    <!-- Hero -->
+    <section class="project-hero section" style="background: linear-gradient(135deg, #0d0d0f, #1a1a22); color: white; padding: 80px 0;">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h1 class="fw-bold mb-3">AIML Department Chatbot</h1>
+            <p class="lead mb-4">
+              A Retrieval-Augmented AI chatbot that provides instant, accurate responses regarding admissions,
+              faculty, courses, research, academic calendar, events and departmental activities using
+              Google Gemini + TF-IDF context search.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="https://github.com/aryamehta0302/AIML-Department-chatbot" target="_blank" class="btn btn-primary">
+                <i class="bi bi-github"></i> View on GitHub
+              </a>
+              <a href="#details" class="btn btn-outline-light">
+                <i class="bi bi-arrow-down"></i> Explore Project
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 text-center" data-aos="zoom-in">
+            <img src="../assets/img/projects/chatbot.png" class="img-fluid rounded shadow-lg" alt="Chatbot Screenshot">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- Highlights -->
+    <section id="details" class="section mt-5">
+      <div class="container">
+
+        <h2 class="text-center mb-4" data-aos="fade-up">Project Highlights</h2>
+        <p class="text-center mb-5" data-aos="fade-up">
+          Developed to automate student–department communication and reduce faculty workload using AI-driven Q/A.
+        </p>
+
+        <div class="row g-4">
+
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-chat-dots fs-2 mb-2"></i>
+              <h5>Retrieval-Augmented Responses</h5>
+              <p>Uses TF-IDF + Cosine Similarity to fetch relevant departmental data.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-robot fs-2 mb-2"></i>
+              <h5>Google Gemini Integration</h5>
+              <p>Generates professional, clean and formatted answers using Gemini Flash.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-globe fs-2 mb-2"></i>
+              <h5>Multilingual + Voice Support</h5>
+              <p>Supports English, Hindi, Gujarati, Tamil, Telugu with speech-to-text and TTS.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Highlights -->
+
+    <!-- Architecture -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">System Workflow</h2>
+
+        <img src="../assets/img/projects/chatbot-flow.png"
+             class="img-fluid rounded mx-auto d-block shadow-sm mb-4"
+             alt="Workflow Diagram"
+             data-aos="zoom-in">
+
+        <ul class="lead" data-aos="fade-up">
+          <li>📌 User enters query via chatbot UI</li>
+          <li>📌 Query sent to Flask backend API</li>
+          <li>📌 TF-IDF retrieval identifies most relevant departmental documents</li>
+          <li>📌 Retrieved context + question sent to Gemini Flash model</li>
+          <li>📌 Model generates clean structured answer (bullet points/table if required)</li>
+          <li>📌 Response delivered to user with optional translation + speech output</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Screenshots</h2>
+        <div class="row g-4">
+  <div class="col-lg-6" data-aos="fade-up">
+    <a href="../assets/img/projects/chatbot-1.png" class="glightbox">
+      <img src="../assets/img/projects/chatbot-1.png" class="project-screenshot shadow-sm" alt="">
+    </a>
+  </div>
+  <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+    <a href="../assets/img/projects/chatbot-2.png" class="glightbox">
+      <img src="../assets/img/projects/chatbot-2.png" class="project-screenshot shadow-sm" alt="">
+    </a>
+  </div>
+</div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section text-center">
+      <h3 data-aos="fade-up">Want to explore the code?</h3>
+      <p class="mb-4" data-aos="fade-up">
+        The TF-IDF index builder, Flask backend, Gemini response engine, and multilingual chatbot UI are available in the GitHub repository.
+      </p>
+      <a href="https://github.com/aryamehta0302/AIML-Department-chatbot" target="_blank" class="btn btn-primary btn-lg">
+        <i class="bi bi-github"></i> Open GitHub Repository
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="container text-center">
+      <p>© <strong class="sitename">Arya Mehta</strong> — All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

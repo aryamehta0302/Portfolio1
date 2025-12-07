@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>MERN Stack Work — Project Case Study | Arya Mehta</title>
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center dark-background sticky-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../portfolio.html" class="active">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero -->
+    <section class="project-hero section" style="background: linear-gradient(135deg, #0d0d0f, #17181f); color: white; padding: 80px 0;">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h1 class="fw-bold mb-3">MERN Stack Work — Full-Stack Learning Repository</h1>
+            <p class="lead mb-4">
+              A step-by-step repository to master full-stack development using the MERN stack. 
+              It includes practical implementations of authentication, CRUD APIs, protected routing, 
+              reusable React components, backend middleware and database schemas — replicating real-world development.
+            </p>
+
+            <div class="d-flex gap-3">
+              <a href="https://github.com/aryamehta0302/MERN-STACK-WORK" target="_blank" class="btn btn-primary">
+                <i class="bi bi-github"></i> View on GitHub
+              </a>
+              <a href="#modules" class="btn btn-outline-light">
+                <i class="bi bi-arrow-down"></i> Explore Details
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 text-center" data-aos="zoom-in">
+            <img src="../assets/img/projects/project-mern.png" alt="MERN Stack Preview" class="img-fluid rounded shadow-lg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modules -->
+    <section id="modules" class="section mt-5">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">What This Repository Covers</h2>
+        <p class="text-center mb-5" data-aos="fade-up">
+          Each module represents a major MERN concept — built with production-style folder structure and clean code.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-shield-check fs-2 mb-3"></i>
+              <h5>Authentication & JWT</h5>
+              <p>Registration, login, token storage, password hashing and middleware-protected routes.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-database-add fs-2 mb-3"></i>
+              <h5>CRUD Operations</h5>
+              <p>REST APIs for create, read, update and delete with controllers and validation.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-collection fs-2 mb-3"></i>
+              <h5>Frontend UI & State</h5>
+              <p>Reusable React components, routing, Axios integration and global state management.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Folder Architecture -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Project Folder Architecture</h2>
+
+<pre class="bg-dark text-light p-4 rounded shadow-sm" data-aos="fade-up">
+📦 MERN-STACK-WORK
+ ┣ 📂 client (React Frontend)
+ ┃ ┣ 📂 components
+ ┃ ┣ 📂 pages
+ ┃ ┣ 📂 context
+ ┃ ┗ 📜 App.js
+ ┣ 📂 server (Node + Express Backend)
+ ┃ ┣ 📂 controllers
+ ┃ ┣ 📂 models
+ ┃ ┣ 📂 middleware
+ ┃ ┣ 📂 routes
+ ┃ ┗ 📜 server.js
+ ┣ 📜 .env
+ ┣ 📜 package.json
+ ┗ 📜 README.md
+</pre>
+      </div>
+    </section>
+
+    <!-- Concepts Practiced -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Skills & Concepts Practiced</h2>
+        <ul class="lead" data-aos="fade-up">
+          <li>✔ REST API architecture using MVC pattern</li>
+          <li>✔ MongoDB & Mongoose schema design</li>
+          <li>✔ JWT authentication + role-based access</li>
+          <li>✔ Axios communication between client & server</li>
+          <li>✔ Protected routes & token validation on frontend</li>
+          <li>✔ Global state handling and component reuse</li>
+          <li>✔ API error handling & middleware logic</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Challenges & Learnings -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Challenges & Learnings</h2>
+
+        <div class="row gy-4">
+          <div class="col-md-6" data-aos="fade-right">
+            <div class="p-4 border rounded h-100">
+              <h5 class="fw-bold">Challenges Faced</h5>
+              <ul class="mt-3">
+                <li>⚠ Managing async API state in React components</li>
+                <li>⚠ Structuring backend files to avoid clutter</li>
+                <li>⚠ Protecting private routes using middleware</li>
+                <li>⚠ Handling token expiration & login persistence</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="p-4 border rounded h-100">
+              <h5 class="fw-bold">Key Learnings</h5>
+              <ul class="mt-3">
+                <li>🟢 Clean file structure increases scalability</li>
+                <li>🟢 Backend-frontend sync relies on predictable API response formats</li>
+                <li>🟢 JWT middleware is the backbone of secure full-stack development</li>
+                <li>🟢 Reusable components boost UI development speed</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section text-center">
+      <h3 data-aos="fade-up">See the full source code and learning journey</h3>
+      <p class="mb-4" data-aos="fade-up">
+        Every module — CRUD, authentication, routes and UI — is version-controlled on GitHub for reference.
+      </p>
+      <a href="https://github.com/aryamehta0302/MERN-STACK-WORK" target="_blank" class="btn btn-primary btn-lg">
+        <i class="bi bi-github"></i> Open GitHub Repository
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="container text-center">
+      <p>© <strong class="sitename">Arya Mehta</strong> — All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

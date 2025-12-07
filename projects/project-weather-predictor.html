@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Weather Predictor — Project Case Study | Arya Mehta</title>
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center dark-background sticky-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../portfolio.html" class="active">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero -->
+    <section class="project-hero section" style="background: linear-gradient(135deg, #0d0d0f, #1c1d25); color: white; padding: 80px 0;">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h1 class="fw-bold mb-3">Weather Predictor — ML-Based Forecasting Tool</h1>
+            <p class="lead mb-4">
+              A machine-learning powered forecasting model that predicts future temperature and humidity
+              using historical climate data. Includes data cleaning, feature scaling, model training,
+              evaluation and visualization for accurate climate estimation.
+            </p>
+
+            <div class="d-flex gap-3">
+              <a href="https://github.com/aryamehta0302/Weather-Predictor" target="_blank" class="btn btn-primary">
+                <i class="bi bi-github"></i> View on GitHub
+              </a>
+              <a href="#features" class="btn btn-outline-light">
+                <i class="bi bi-arrow-down"></i> Explore Project
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 text-center" data-aos="zoom-in">
+            <img src="../assets/img/projects/weather.png" alt="Weather Predictor Preview" class="img-fluid rounded shadow-lg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section id="features" class="section mt-5">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Project Highlights</h2>
+        <p class="text-center mb-5" data-aos="fade-up">Accurately forecasts weather trends by learning patterns from historical datasets.</p>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-thermometer-high fs-2 mb-2"></i>
+              <h5>Temperature & Humidity Prediction</h5>
+              <p>Supervised regression models forecast climate changes with increasing accuracy.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-graph-up-arrow fs-2 mb-2"></i>
+              <h5>Performance Visualization</h5>
+              <p>Graphs clearly showcase prediction vs actual values for interpretability.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-cpu fs-2 mb-2"></i>
+              <h5>Optimized ML Pipeline</h5>
+              <p>Feature scaling, train-test split, cross-validation and evaluation metrics integrated.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Model Workflow</h2>
+
+        <img src="../assets/img/projects/weather-workflow.png" class="img-fluid rounded mx-auto d-block shadow-sm mb-4" alt="ML Workflow" data-aos="zoom-in">
+
+        <ul class="lead" data-aos="fade-up">
+          <li>📌 Dataset collection & loading (CSV format)</li>
+          <li>📌 Handling missing values & outliers + feature scaling</li>
+          <li>📌 Model training using Random Forest & Linear Regression</li>
+          <li>📌 Evaluation using MAE, RMSE & R² score</li>
+          <li>📌 Visualization of results using Matplotlib & Seaborn</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Model Accuracy & Metrics -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Model Performance Summary</h2>
+
+        <div class="table-responsive" data-aos="fade-up">
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>MAE</th>
+                <th>RMSE</th>
+                <th>R² Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Linear Regression</td>
+                <td>6.28</td>
+                <td>8.03</td>
+                <td>0.84</td>
+              </tr>
+              <tr>
+                <td><strong>Random Forest (Best)</strong></td>
+                <td><strong>4.91</strong></td>
+                <td><strong>6.15</strong></td>
+                <td><strong>0.91</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-center mt-3 lead" data-aos="fade-up">
+          🔥 Random Forest delivered the best accuracy due to its ability to capture non-linear weather patterns.
+        </p>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Screenshots</h2>
+        <div class="row g-4">
+          <div class="col-lg-6" data-aos="fade-up">
+  <a href="../assets/img/projects/weather-1.png" class="glightbox">
+    <img src="../assets/img/projects/weather-1.png" class="project-screenshot shadow-sm" alt="">
+  </a>
+</div>
+
+          <div class="col-lg-6" data-aos="fade-up">
+  <a href="../assets/img/projects/weather-2.png" class="glightbox">
+    <img src="../assets/img/projects/weather-2.png" class="project-screenshot shadow-sm" alt="">
+  </a>
+</div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Learnings -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Challenges & Learnings</h2>
+
+        <div class="row gy-4">
+          <div class="col-md-6" data-aos="fade-right">
+            <div class="p-4 border rounded h-100">
+              <h5 class="fw-bold">Challenges Faced</h5>
+              <ul class="mt-3">
+                <li>🔸 Handling missing and fluctuating values in raw weather data</li>
+                <li>🔸 Maintaining prediction stability across different seasons</li>
+                <li>🔸 Selecting reliable error metrics for ML regression models</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="p-4 border rounded h-100">
+              <h5 class="fw-bold">Key Learnings</h5>
+              <ul class="mt-3">
+                <li>🔹 Practical feature engineering dramatically improves accuracy</li>
+                <li>🔹 Cross-validation helps prevent overfitting on seasonal datasets</li>
+                <li>🔹 Visualization builds trust in ML model predictions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section text-center">
+      <h3 data-aos="fade-up">Want to explore the source code?</h3>
+      <p class="mb-4" data-aos="fade-up">
+        Notebook includes EDA, preprocessing, training pipeline and prediction logic.
+      </p>
+      <a href="https://github.com/aryamehta0302/Weather-Predictor" target="_blank" class="btn btn-primary btn-lg">
+        <i class="bi bi-github"></i> Open GitHub Repository
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="container text-center">
+      <p>© <strong class="sitename">Arya Mehta</strong> — All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

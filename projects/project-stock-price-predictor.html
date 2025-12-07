@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Stock Price Predictor — Project Case Study | Arya Mehta</title>
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center dark-background sticky-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../portfolio.html" class="active">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section class="project-hero section" style="background: linear-gradient(135deg, #0d0d0f, #1a1a22); color: white; padding: 80px 0;">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+
+          <div class="col-lg-6" data-aos="fade-right">
+            <h1 class="fw-bold mb-3">Stock Price Predictor — AI-Driven Financial Forecasting</h1>
+            <p class="lead mb-4">
+              A machine learning project that predicts next-day stock closing prices using real-time market
+              data, trend indicators and XGBoost regression. It supports any global stock ticker and
+              generates interactive forecasting charts to assist traders and investors.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="https://github.com/aryamehta0302/Stock-Price-Predictor" target="_blank" class="btn btn-primary">
+                <i class="bi bi-github"></i> View on GitHub
+              </a>
+              <a href="#features" class="btn btn-outline-light">
+                <i class="bi bi-arrow-down"></i> Explore Project
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 text-center" data-aos="zoom-in">
+            <img src="../assets/img/projects/stock.png" alt="Stock Predictor Screenshot" class="img-fluid rounded shadow-lg">
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <!-- Project Overview -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Project Overview</h2>
+        <p class="lead text-center mb-4" data-aos="fade-up">
+          Stock Price Predictor analyzes real market data from Yahoo Finance and predicts the upcoming
+          closing price based on short-term and long-term trends. It demonstrates the power of ML regression
+          in financial forecasting and highlights the limitations of prediction in volatile markets.
+        </p>
+        <ul class="fs-5" data-aos="fade-up">
+          <li>💹 Fetches live historical market data using Yahoo Finance API</li>
+          <li>⚙️ Performs feature engineering using SMA, EMA, volatility & momentum indicators</li>
+          <li>🤖 Trains financial time-series regression using XGBoost</li>
+          <li>📉 Visualizes forecast vs actual values for decision support</li>
+          <li>🌍 Supports global stocks: NASDAQ, NYSE, NSE, crypto tickers & more</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section id="features" class="section mt-5">
+      <div class="container">
+
+        <h2 class="text-center mb-4" data-aos="fade-up">Key Features</h2>
+        <p class="text-center mb-5" data-aos="fade-up">
+          Built for finance learners, traders, and analysts to leverage machine learning in market forecasting.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-graph-up fs-2 mb-2"></i>
+              <h5>AI-Based Price Forecasting</h5>
+              <p>Uses XGBoost to model market trends and predict next-day closing price.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-globe2 fs-2 mb-2"></i>
+              <h5>Supports Every Global Stock</h5>
+              <p>Works with tickers from NSE, NASDAQ, NYSE, DOW, crypto symbols and more.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="p-4 border rounded h-100 text-center">
+              <i class="bi bi-bar-chart-line fs-2 mb-2"></i>
+              <h5>Visual Forecast Analysis</h5>
+              <p>Generates comparative charts for actual vs predicted price movement.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Workflow -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Prediction Workflow</h2>
+
+        <img src="../assets/img/projects/stock-workflow.png" class="img-fluid rounded mx-auto d-block shadow-sm mb-4" alt="Workflow" data-aos="zoom-in">
+
+        <ul class="lead" data-aos="fade-up">
+          <li>✔ User inputs ticker symbol (e.g., RELIANCE.NS / TSLA / AAPL)</li>
+          <li>✔ Yahoo Finance API fetches 6-month benchmark dataset</li>
+          <li>✔ Technical indicators extracted via feature engineering</li>
+          <li>✔ Trained XGBoost model predicts next-day price</li>
+          <li>✔ Matplotlib visualizes market trend and prediction output</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Performance -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Model Performance</h2>
+
+        <div class="table-responsive" data-aos="fade-up">
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>MAE</th>
+                <th>RMSE</th>
+                <th>R² Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Linear Regression</td>
+                <td>8.91</td>
+                <td>11.56</td>
+                <td>0.76</td>
+              </tr>
+              <tr>
+                <td><strong>XGBoost (Best)</strong></td>
+                <td><strong>5.02</strong></td>
+                <td><strong>7.34</strong></td>
+                <td><strong>0.89</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-center mt-3 lead" data-aos="fade-up">
+          📌 XGBoost outperformed linear regression due to its ability to capture volatility and non-linear market trends.
+        </p>
+      </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Results Preview</h2>
+        <div class="row g-4">
+          <div class="col-lg-6" data-aos="fade-up">
+            <a href="../assets/img/projects/stock-1.png" class="glightbox">
+              <img src="../assets/img/projects/stock-1.png" class="img-fluid rounded shadow-sm" alt="Homepage Screenshot">
+            </a>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <a href="../assets/img/projects/stock-2.png" class="glightbox">
+              <img src="../assets/img/projects/stock-2.png" class="img-fluid rounded shadow-sm" alt="Prediction Output Screenshot">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenges & Learnings -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Challenges & Learnings</h2>
+
+        <div class="row gy-4">
+          <div class="col-md-6" data-aos="fade-right">
+            <div class="p-4 border rounded h-100">
+              <h5 class="fw-bold">Challenges Faced</h5>
+              <ul class="mt-3">
+                <li>⚠ High volatility causing sudden price spikes</li>
+                <li>⚠ Choosing reliable error metrics for stock forecasting</li>
+                <li>⚠ Handling missing values during holidays/weekends</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="p-4 border rounded h-100">
+              <h5 class="fw-bold">Key Learnings</h5>
+              <ul class="mt-3">
+                <li>🟢 Technical indicators significantly improve model accuracy</li>
+                <li>🟢 Real-world finance requires cross-validation to avoid overfitting</li>
+                <li>🟢 Visualization helps convert ML predictions into decision-based insights</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GitHub CTA -->
+    <section class="section text-center">
+      <h3 data-aos="fade-up">Want to explore the code?</h3>
+      <p class="mb-4" data-aos="fade-up">
+        Notebooks include complete EDA, ML training workflow, hyperparameter tuning and forecasting logic.
+      </p>
+      <a href="https://github.com/aryamehta0302/Stock-Price-Predictor" target="_blank" class="btn btn-primary btn-lg">
+        <i class="bi bi-github"></i> Browse Full GitHub Repository
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="container text-center">
+      <p>© <strong class="sitename">Arya Mehta</strong> — All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
