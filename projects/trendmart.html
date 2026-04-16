@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Trend Mart — Ecommerce Project Case Study | Arya Mehta</title>
+  <meta name="description" content="Full-stack MERN e-commerce platform with JWT authentication, admin dashboard, payment integration, and cloud deployment.">
 
   <link href="../assets/img/favicon.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -14,6 +15,46 @@
   <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="../assets/css/main.css" rel="stylesheet">
+
+  <style>
+    section, .section { overflow: visible !important; }
+    .mermaid-container {
+      background: linear-gradient(135deg, #0d1117, #161b22);
+      border: 1px solid rgba(61, 126, 199, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem auto;
+      overflow-x: auto;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .mermaid-container:hover {
+      border-color: rgba(61, 126, 199, 0.5);
+      box-shadow: 0 0 30px rgba(61, 126, 199, 0.1);
+    }
+    #mermaid-output {
+      display: flex;
+      justify-content: center;
+      min-height: 200px;
+      align-items: center;
+      color: #555;
+    }
+    #mermaid-output svg { height: auto; }
+    .tech-badge {
+      display: inline-block;
+      background: rgba(61, 126, 199, 0.15);
+      color: #7eb8f0;
+      border: 1px solid rgba(61, 126, 199, 0.3);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin: 4px;
+      transition: all 0.3s ease;
+    }
+    .tech-badge:hover {
+      background: rgba(61, 126, 199, 0.3);
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 
 <body class="portfolio-details-page">
@@ -33,7 +74,6 @@
       </nav>
     </div>
   </header>
-  <!-- End Header -->
 
   <main class="main">
 
@@ -42,8 +82,14 @@
       <div class="container">
         <div class="row align-items-center gy-4">
           <div class="col-lg-6" data-aos="fade-right">
-            <h1 class="fw-bold mb-3">Trend Mart — Ecommerce Store</h1>
-            <p class="lead mb-4">A modern and feature-rich e-commerce platform built using the MERN Stack (MongoDB, Express, React, Node.js). Trend Mart provides users with a real-time shopping experience, secure authentication, product management, and admin control — all in one place.</p>
+            <h1 class="fw-bold mb-3">Trend Mart — Full-Stack E-Commerce Platform</h1>
+            <p class="lead mb-4">
+              Building a production-quality e-commerce system requires solving authentication,
+              inventory management, payment processing, and admin operations simultaneously.
+              Trend Mart tackles all four, delivering a complete MERN-stack storefront with
+              role-based access control, real-time cart management, and a dual-deployment architecture
+              across Vercel and Render.
+            </p>
             <div class="d-flex gap-3">
               <a href="https://github.com/aryamehta0302/EcommerceStore" target="_blank" class="btn btn-primary">
                 <i class="bi bi-github"></i> View on GitHub
@@ -55,19 +101,48 @@
           </div>
 
           <div class="col-lg-6 text-center" data-aos="zoom-in">
-            <img src="../assets/img/projects/mern.png" class="img-fluid rounded shadow-lg" alt="Trend Mart Screenshot">
+            <img src="../assets/img/projects/mern.png" class="img-fluid rounded shadow-lg" alt="Trend Mart Storefront">
           </div>
         </div>
       </div>
     </section>
-    <!-- End Hero -->
+
+    <!-- Project Overview -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Project Overview</h2>
+
+        <p class="lead text-center mb-4" data-aos="fade-up">
+          E-commerce platforms demand careful orchestration between user-facing storefront interactions
+          and backend inventory, order, and payment pipelines. Trend Mart approaches this as an
+          engineering challenge rather than a template exercise — every component from JWT session
+          management to order receipt generation was built from scratch.
+        </p>
+
+        <p class="lead text-center mb-4" data-aos="fade-up">
+          The platform supports the complete purchase lifecycle: product browsing with filters and search,
+          dynamic cart with persistent state, integrated UPI and Visa payment flows, and automated
+          PDF receipt generation via PDFKit. An admin dashboard provides real-time control over product
+          catalog, user management, and order processing with secure role-based access.
+        </p>
+
+        <p class="lead text-center mb-4" data-aos="fade-up">
+          The frontend leverages React with Redux for predictable state management, while the backend
+          implements a modular Express API architecture designed for horizontal scalability.
+          Cloud deployment separates concerns — frontend on Vercel for edge performance,
+          backend on Render for API reliability.
+        </p>
+      </div>
+    </section>
 
     <!-- Highlights -->
     <section id="features" class="section mt-5">
       <div class="container">
 
-        <h2 class="text-center mb-4" data-aos="fade-up">Project Highlights</h2>
-        <p class="text-center mb-5" data-aos="fade-up">Trend Mart combines modern UI, real-time performance, and secure backend infrastructure to simulate a complete online store environment.</p>
+        <h2 class="text-center mb-4" data-aos="fade-up">Key Features</h2>
+        <p class="text-center mb-5" data-aos="fade-up">
+          Engineered to simulate a real-world e-commerce operation with production-grade authentication, inventory, and payment systems.
+        </p>
 
         <div class="row g-4">
 
@@ -75,7 +150,7 @@
             <div class="p-4 border rounded h-100 text-center">
               <i class="bi bi-shield-lock fs-2 mb-2"></i>
               <h5>JWT Authentication</h5>
-              <p>Implemented secure login and signup using JSON Web Tokens (JWT) and bcrypt for password encryption. Users and admins have separate access privileges, ensuring data integrity and restricted controls.</p>
+              <p>Secure session management with bcrypt password hashing, HTTP-only cookies, and separate privilege levels for customers and administrators.</p>
             </div>
           </div>
 
@@ -83,15 +158,15 @@
             <div class="p-4 border rounded h-100 text-center">
               <i class="bi bi-bag-check fs-2 mb-2"></i>
               <h5>Product Management</h5>
-              <p>Admin users can create, update, and delete products, along with managing categories, pricing, images, and stock. CSV data was seeded automatically into MongoDB using Node.js for scalability testing.</p>
+              <p>Full CRUD operations for products with category management, image handling, pricing controls, and CSV-based bulk data seeding for scalability testing.</p>
             </div>
           </div>
 
           <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="p-4 border rounded h-100 text-center">
               <i class="bi bi-cart fs-2 mb-2"></i>
-              <h5>Cart & Wishlist</h5>
-              <p>Dynamic cart with real-time quantity updates, total calculations, and persistent data storage using localStorage. Includes wishlist functionality to enhance the user shopping experience.</p>
+              <h5>Cart and Wishlist</h5>
+              <p>Dynamic cart with real-time quantity updates, automatic total calculations, and persistent localStorage state. Wishlist functionality enhances browsing experience.</p>
             </div>
           </div>
 
@@ -99,41 +174,22 @@
 
       </div>
     </section>
-    <!-- End Highlights -->
 
-    <!-- Architecture -->
+    <!-- Architecture Diagram -->
     <section class="section">
       <div class="container">
         <h2 class="text-center mb-4" data-aos="fade-up">System Architecture</h2>
 
-        <img src="../assets/img/projects/trendmart-flow.png"
-             class="img-fluid rounded mx-auto d-block shadow-sm mb-4"
-             alt="Architecture Diagram"
-             data-aos="zoom-in">
+        <div class="mermaid-container" data-aos="zoom-in">
+          <div id="mermaid-output">Loading diagram...</div>
+        </div>
 
-        <ul class="lead" data-aos="fade-up">
-          <li>📌 <strong>Frontend:</strong> Built using React (Vite) with Bootstrap 5 and Axios for API communication. Dark mode and responsive design implemented for a seamless experience across devices.</li>
-          <li>📌 <strong>Backend:</strong> RESTful APIs powered by Node.js and Express.js with modular routes for products, users, and orders.</li>
-          <li>📌 <strong>Database:</strong> MongoDB Atlas for scalable and secure cloud data storage, integrated using Mongoose ORM.</li>
-          <li>📌 <strong>Authentication:</strong> JWT-based token management ensures secure sessions and role-based route protection.</li>
-          <li>📌 <strong>Deployment:</strong> Backend deployed on Render, frontend hosted on Vercel for optimized performance and global reach.</li>
+        <ul class="lead mt-4" data-aos="fade-up">
+          <li><strong>Frontend:</strong> React with Vite for fast builds, Redux for state management, Bootstrap 5 for responsive UI, and Axios for API communication. Dark mode support included.</li>
+          <li><strong>Backend:</strong> Express.js with modular route architecture, JWT middleware for authentication, and controller-based business logic separation.</li>
+          <li><strong>Database:</strong> MongoDB Atlas provides scalable cloud storage with Mongoose ORM for schema validation and relationship management.</li>
+          <li><strong>Deployment:</strong> Dual-service architecture — frontend on Vercel for CDN-backed edge delivery, backend on Render for reliable API hosting.</li>
         </ul>
-      </div>
-    </section>
-
-    <!-- Development Process -->
-    <section class="section">
-      <div class="container">
-        <h2 class="text-center mb-4" data-aos="fade-up">Development Journey</h2>
-        <p class="lead" data-aos="fade-up">
-          Trend Mart was developed as a real-world simulation of a professional e-commerce platform. The development process included backend API design, authentication setup, and dynamic UI creation.
-        </p>
-        <p class="lead" data-aos="fade-up">
-          The application features full CRUD operations, live search, product filters, and payment options. It integrates UPI & Visa payment methods and generates order receipts dynamically using PDFKit. The admin dashboard offers real-time control over users, products, and orders with secure access management.
-        </p>
-        <p class="lead" data-aos="fade-up">
-          Dark mode support, toast notifications, and responsive design were implemented to enhance user experience. Finally, the project was deployed using a dual-service structure: the backend via Render and the frontend via Vercel.
-        </p>
       </div>
     </section>
 
@@ -144,13 +200,62 @@
         <div class="row g-4">
           <div class="col-lg-6" data-aos="fade-up">
             <a href="../assets/img/projects/trendmart-1.png" class="glightbox">
-              <img src="../assets/img/projects/trendmart-1.png" class="img-fluid rounded shadow-sm" alt="Trend Mart UI">
+              <img src="../assets/img/projects/trendmart-1.png" class="img-fluid rounded shadow-sm" alt="Trend Mart storefront interface">
             </a>
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <a href="../assets/img/projects/trendmart-2.png" class="glightbox">
-              <img src="../assets/img/projects/trendmart-2.png" class="img-fluid rounded shadow-sm" alt="Trend Mart Dashboard">
+              <img src="../assets/img/projects/trendmart-2.png" class="img-fluid rounded shadow-sm" alt="Admin dashboard view">
             </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section text-center">
+      <div class="container">
+        <h3 class="mb-4" data-aos="fade-up">Tech Stack</h3>
+        <div data-aos="fade-up">
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">Redux</span>
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">Express</span>
+          <span class="tech-badge">MongoDB Atlas</span>
+          <span class="tech-badge">JWT</span>
+          <span class="tech-badge">Bcrypt</span>
+          <span class="tech-badge">PDFKit</span>
+          <span class="tech-badge">Vite</span>
+          <span class="tech-badge">Bootstrap 5</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenges & Learnings -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Challenges & Learnings</h2>
+
+        <div class="row gy-4">
+          <div class="col-md-6" data-aos="fade-right">
+            <div class="p-4 border rounded h-100">
+              <h5 class="fw-bold">Challenges Faced</h5>
+              <ul class="mt-3">
+                <li>Designing a cart system that maintains consistency between localStorage persistence and server-side order state</li>
+                <li>Implementing role-based access control that cleanly separates admin and customer authorization without code duplication</li>
+                <li>Managing deployment configuration across two separate hosting platforms while maintaining API reliability</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="p-4 border rounded h-100">
+              <h5 class="fw-bold">Key Learnings</h5>
+              <ul class="mt-3">
+                <li>Redux middleware significantly simplifies complex async state transitions in cart and order flows</li>
+                <li>JWT-based middleware is the backbone of secure full-stack applications — understanding token lifecycle is critical</li>
+                <li>Dual-deployment architectures require careful CORS configuration and environment-aware API routing</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -158,16 +263,15 @@
 
     <!-- GitHub CTA -->
     <section class="section text-center">
-      <h3 data-aos="fade-up">Want to explore the code?</h3>
-      <p class="mb-4" data-aos="fade-up">The complete source code for both frontend and backend — including authentication, Redux store, and REST API — is available on GitHub.</p>
+      <h3 data-aos="fade-up">Explore the complete platform</h3>
+      <p class="mb-4" data-aos="fade-up">Full source code for frontend, backend, authentication, Redux store, and REST API is available on GitHub.</p>
       <a href="https://github.com/aryamehta0302/EcommerceStore" target="_blank" class="btn btn-primary btn-lg">
         <i class="bi bi-github"></i> Open GitHub Repository
       </a>
       <div class="mt-4" data-aos="fade-up">
         <a href="https://ecommerce-store-drab-pi.vercel.app" target="_blank" class="btn-live-demo btn-lg">
-  <i class="bi bi-box-arrow-up-right"></i> Live Demo — TrendMart
-</a>
-
+          <i class="bi bi-box-arrow-up-right"></i> Live Demo — TrendMart
+        </a>
       </div>
     </section>
 
@@ -176,7 +280,7 @@
   <!-- Footer -->
   <footer id="footer" class="footer">
     <div class="container text-center">
-      <p>© <strong class="sitename">Arya Mehta</strong> — All Rights Reserved</p>
+      <p>&copy; <strong class="sitename">Arya Mehta</strong> — All Rights Reserved</p>
     </div>
   </footer>
 
@@ -188,6 +292,26 @@
   <script src="../assets/vendor/aos/aos.js"></script>
   <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: false, theme: 'dark', flowchart: { useMaxWidth: false, htmlLabels: true, curve: 'basis', padding: 15, nodeSpacing: 60, rankSpacing: 60 }, themeVariables: { darkMode: true, fontSize: '14px', primaryColor: '#1e3a5f', primaryTextColor: '#e0e0e0', primaryBorderColor: '#3d7ec7', lineColor: '#3d7ec7', secondaryColor: '#1a1a2e', tertiaryColor: '#16213e' } });
+    window.addEventListener('load', async function() {
+      await document.fonts.ready;
+      var chartDef = `graph TD
+        A[React] --> B[Redux]
+        A --> C[Axios]
+        C --> D[Express]
+        D --> E[JWT]
+        E --> F[Controller]
+        F --> G[MongoDB]
+        D --> H[Admin]
+        H --> I[CRUD]
+        I --> G
+        F --> J[PDF]
+        F --> K[Payment]`;
+      try { var r = await mermaid.render('arch-diagram', chartDef); document.getElementById('mermaid-output').innerHTML = r.svg; } catch(e) { console.error(e); }
+    });
+  </script>
 </body>
 
 </html>

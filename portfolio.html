@@ -22,6 +22,76 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Force uniform card heights */
+    .portfolio .isotope-container .portfolio-item {
+      display: flex;
+    }
+    .portfolio .portfolio-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+    .portfolio .portfolio-card .portfolio-img {
+      height: 220px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .portfolio .portfolio-card .portfolio-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .portfolio .portfolio-card .portfolio-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .portfolio .portfolio-card .portfolio-info h4 {
+      font-size: 1.1rem;
+      min-height: 2.6rem;
+      margin-bottom: 8px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .portfolio .portfolio-card .portfolio-info p {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      min-height: 2.7rem;
+      max-height: 2.7rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+    .portfolio .portfolio-card .portfolio-info .portfolio-tags {
+      margin-top: auto;
+    }
+    .portfolio .portfolio-card .portfolio-info .btn-view-more {
+      background: transparent;
+      color: var(--accent-color);
+      border: 1px solid var(--accent-color);
+      padding: 6px 18px;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .portfolio .portfolio-card .portfolio-info .btn-view-more:hover {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 
 <body class="portfolio-page">
@@ -57,12 +127,12 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Projects</h2>
-        <p>Projects that highlight my skills in ML, MERN and real-world software development.</p>
+        <p>Production-grade systems spanning AI/ML, full-stack development, and intelligent automation.</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="isotope-layout" data-default-filter="*" data-layout="fitRows" data-sort="original-order">
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
             <li data-filter="*" class="filter-active">All</li>
@@ -73,6 +143,76 @@
           </ul>
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+<!-- AIOps — Featured -->
+<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
+  <div class="portfolio-card">
+    <div class="portfolio-img">
+      <img src="assets/img/projects/aiops.png" alt="AIOps Platform" class="img-fluid">
+      <div class="portfolio-overlay">
+        <a href="assets/img/projects/aiops.png" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
+        <a href="https://github.com/aryamehta0302" class="portfolio-details-link" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+    <div class="portfolio-info">
+      <h4>AIOps — Incident Detection & Self-Healing</h4>
+      <p>Autonomous infrastructure monitoring with multi-agent AI orchestration and LLM-powered incident explanation.</p>
+      <div class="portfolio-tags"><span>Python</span><span>Llama 3</span><span>Prometheus</span></div>
+      <div class="mt-3 d-flex justify-content-end">
+        <a href="projects/aiops.html" class="btn btn-view-more">
+          View Details <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MediVerify -->
+<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai filter-ml">
+  <div class="portfolio-card">
+    <div class="portfolio-img">
+      <img src="assets/img/projects/mediverify.png" alt="MediVerify Detection System" class="img-fluid">
+      <div class="portfolio-overlay">
+        <a href="assets/img/projects/mediverify.png" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
+        <a href="https://github.com/aryamehta0302" class="portfolio-details-link" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+    <div class="portfolio-info">
+      <h4>MediVerify — Fake Medicine Detection</h4>
+      <p>Multi-stage OCR pipeline with BLIP-2 visual analysis for pharmaceutical authenticity verification.</p>
+      <div class="portfolio-tags"><span>OCR</span><span>BLIP-2</span><span>Angular</span></div>
+      <div class="mt-3 d-flex justify-content-end">
+        <a href="projects/mediverify.html" class="btn btn-view-more">
+          View Details <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Chronos -->
+<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web filter-mern">
+  <div class="portfolio-card">
+    <div class="portfolio-img">
+      <img src="assets/img/projects/chronos.png" alt="Chronos Task Manager" class="img-fluid">
+      <div class="portfolio-overlay">
+        <a href="assets/img/projects/chronos.png" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
+        <a href="https://github.com/aryamehta0302" class="portfolio-details-link" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+    <div class="portfolio-info">
+      <h4>Chronos — Task & Time Management</h4>
+      <p>Intelligent productivity platform with priority scoring, time tracking, and data-driven analytics.</p>
+      <div class="portfolio-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+      <div class="mt-3 d-flex justify-content-end">
+        <a href="projects/chronos.html" class="btn btn-view-more">
+          View Details <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Stock Price Predictor -->
 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml">
   <div class="portfolio-card">
@@ -85,47 +225,39 @@
     </div>
     <div class="portfolio-info">
       <h4>Stock Price Predictor</h4>
-      <p>Predicts stock movement using ML regression and historical market patterns.</p>
-      <div class="portfolio-tags"><span>Python</span><span>ML</span><span>Data Analysis</span></div>
-    <div class="mt-3 d-flex justify-content-end">
-  <a href="projects/project-stock-price-predictor.html" class="btn btn-view-more">
-    View Details <i class="bi bi-arrow-right"></i>
-  </a>
-</div>
-    
+      <p>XGBoost-powered financial forecasting using real-time Yahoo Finance data and engineered technical indicators.</p>
+      <div class="portfolio-tags"><span>Python</span><span>XGBoost</span><span>Data Analysis</span></div>
+      <div class="mt-3 d-flex justify-content-end">
+        <a href="projects/project-stock-price-predictor.html" class="btn btn-view-more">
+          View Details <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
-
-<!-- MERN STACK WORK -->
-<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+<!-- Trend Mart — MERN Ecommerce -->
+<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mern filter-web">
   <div class="portfolio-card">
     <div class="portfolio-img">
-      <img src="assets/img/projects/project-mern.png" alt="MERN Stack Work" class="img-fluid">
+      <img src="assets/img/projects/mern.png" alt="Trend Mart Ecommerce" class="img-fluid">
       <div class="portfolio-overlay">
-        <a href="assets/img/projects/project-mern.png" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
-        <a href="https://github.com/aryamehta0302/MERN-STACK-WORK" class="portfolio-details-link" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="assets/img/projects/mern.png" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
+        <a href="https://github.com/aryamehta0302/EcommerceStore" class="portfolio-details-link" target="_blank"><i class="bi bi-github"></i></a>
       </div>
     </div>
     <div class="portfolio-info">
-      <h4>MERN Stack Work</h4>
-      <p>Beginner-to-intermediate projects, CRUD operations and deployment fundamentals.</p>
-
-      <div class="portfolio-tags">
-        <span>MERN</span>
-        <span>React</span>
-        <span>Node.js</span>
-      </div>
+      <h4>Trend Mart — Full-Stack E-Commerce</h4>
+      <p>Complete MERN storefront with JWT auth, Redux state management, admin dashboard, and dual-cloud deployment.</p>
+      <div class="portfolio-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
       <div class="mt-3 d-flex justify-content-end">
-  <a href="projects/project-mern-stack-work.html" class="btn btn-view-more">
-    View Details <i class="bi bi-arrow-right"></i>
-  </a>
-</div>
+        <a href="projects/trendmart.html" class="btn btn-view-more">
+          View Details <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
     </div>
   </div>
 </div>
-
 
 <!-- AIML Department Chatbot -->
 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
@@ -139,65 +271,65 @@
     </div>
     <div class="portfolio-info">
       <h4>AIML Department Chatbot</h4>
-      <p>NLP chatbot answering student FAQs with automated information retrieval.</p>
-      <div class="portfolio-tags"><span>NLP</span><span>Chatbot</span><span>Python</span></div>
+      <p>Retrieval-augmented AI assistant with Gemini, TF-IDF search, and multilingual voice support.</p>
+      <div class="portfolio-tags"><span>NLP</span><span>Gemini</span><span>Python</span></div>
       <div class="mt-3 d-flex justify-content-end">
-  <a href="projects/aiml-chatbot.html" class="btn btn-view-more">
-    View Details <i class="bi bi-arrow-right"></i>
-  </a>
-</div>
-    </div>
-  </div>
-</div>
-
-<!-- MERN Stack Ecommerce (Trend Mart) -->
-<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mern filter-web">
-  <div class="portfolio-card">
-    <div class="portfolio-img">
-      <img src="assets/img/projects/mern.png" alt="Trend Mart Ecommerce" class="img-fluid">
-      <div class="portfolio-overlay">
-        <a href="assets/img/projects/mern.png" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
-        <a href="https://github.com/aryamehta0302/EcommerceStore" class="portfolio-details-link" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="projects/aiml-chatbot.html" class="btn btn-view-more">
+          View Details <i class="bi bi-arrow-right"></i>
+        </a>
       </div>
     </div>
-    <div class="portfolio-info">
-      <h4>Trend Mart – MERN Ecommerce</h4>
-      <p>Full MERN store with authentication, product checkout and admin dashboard.</p>
-      <div class="portfolio-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
-      <div class="mt-3 d-flex justify-content-end">
-  <a href="projects/trendmart.html" class="btn btn-view-more">
-    View Details <i class="bi bi-arrow-right"></i>
-  </a>
-</div>
-    </div>
   </div>
 </div>
 
-<!-- Blogspot Platform -->
-<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+<!-- BlogSpot Platform -->
+<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web filter-mern">
   <div class="portfolio-card">
     <div class="portfolio-img">
-      <img src="assets/img/projects/blog.png" alt="Blogspot" class="img-fluid">
+      <img src="assets/img/projects/blog.png" alt="BlogSpot Platform" class="img-fluid">
       <div class="portfolio-overlay">
         <a href="assets/img/projects/blog.png" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
         <a href="https://github.com/aryamehta0302/BLOGSPOT" class="portfolio-details-link" target="_blank"><i class="bi bi-github"></i></a>
       </div>
     </div>
     <div class="portfolio-info">
-      <h4>Blogspot</h4>
-      <p>Blog publishing system with CRUD, authentication and dashboard controls.</p>
-      <div class="portfolio-tags"><span>React</span><span>REST API</span><span>Auth</span></div>
+      <h4>BlogSpot — Content Publishing Platform</h4>
+      <p>MERN blogging platform with rich text editor, role-based access, comments, and admin dashboard.</p>
+      <div class="portfolio-tags"><span>React</span><span>REST API</span><span>JWT</span></div>
       <div class="mt-3 d-flex justify-content-end">
-  <a href="projects/blogspot.html" class="btn btn-view-more">
-    View Details <i class="bi bi-arrow-right"></i>
-  </a>
+        <a href="projects/blogspot.html" class="btn btn-view-more">
+          View Details <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- MERN Stack Work -->
+<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web filter-mern">
+  <div class="portfolio-card">
+    <div class="portfolio-img">
+      <img src="assets/img/projects/project-mern.png" alt="MERN Stack Work" class="img-fluid">
+      <div class="portfolio-overlay">
+        <a href="assets/img/projects/project-mern.png" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
+        <a href="https://github.com/aryamehta0302/MERN-STACK-WORK" class="portfolio-details-link" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+    <div class="portfolio-info">
+      <h4>MERN Stack Engineering Repository</h4>
+      <p>Production-grade implementations of authentication, CRUD APIs, middleware chains, and state management.</p>
+      <div class="portfolio-tags"><span>MERN</span><span>React</span><span>Node.js</span></div>
+      <div class="mt-3 d-flex justify-content-end">
+        <a href="projects/project-mern-stack-work.html" class="btn btn-view-more">
+          View Details <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- Weather Predictor -->
-<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml filter-web">
+<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml">
   <div class="portfolio-card">
     <div class="portfolio-img">
       <img src="assets/img/projects/weather.png" alt="Weather Predictor" class="img-fluid">
@@ -208,13 +340,13 @@
     </div>
     <div class="portfolio-info">
       <h4>Weather Predictor</h4>
-      <p>Weather forecasting using ML and API-based real-time climate data.</p>
-      <div class="portfolio-tags"><span>ML</span><span>API</span><span>Data Science</span></div>
+      <p>Random Forest regression model forecasting temperature and humidity from historical climate datasets.</p>
+      <div class="portfolio-tags"><span>ML</span><span>Scikit-learn</span><span>Data Science</span></div>
       <div class="mt-3 d-flex justify-content-end">
-  <a href="projects/project-weather-predictor.html" class="btn btn-view-more">
-    View Details <i class="bi bi-arrow-right"></i>
-  </a>
-</div>
+        <a href="projects/project-weather-predictor.html" class="btn btn-view-more">
+          View Details <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
     </div>
   </div>
 </div>
