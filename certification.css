@@ -1,0 +1,233 @@
+.certification-section {
+  padding-top: 40px;
+}
+
+.cert-grid {
+  margin-top: 10px;
+}
+
+.cert-card {
+  position: relative;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  background: color-mix(in srgb, var(--surface-color), transparent 6%);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 30%);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.26);
+}
+
+.cert-open {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+
+.cert-preview {
+  position: relative;
+  min-height: 280px;
+  background: radial-gradient(circle at 22% 18%, rgba(19, 135, 193, 0.28), transparent 52%),
+    linear-gradient(140deg, #11212b 0%, #182933 50%, #1f3340 100%);
+}
+
+.cert-thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none;
+  background: #111;
+}
+
+.cert-preview::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.28) 100%);
+}
+
+.cert-stamp {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), black 16%);
+}
+
+.cert-file {
+  display: none;
+}
+
+.cert-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 10%, rgba(0, 0, 0, 0.86) 100%);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.cert-card:hover .cert-overlay,
+.cert-card:focus-within .cert-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cert-title {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.cert-issuer,
+.cert-date,
+.cert-desc {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--default-color), transparent 8%);
+}
+
+.cert-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.cert-tag {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 5px 11px;
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), black 18%);
+}
+
+.cert-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.cert-modal.is-open {
+  display: flex;
+}
+
+.cert-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity 0.32s ease;
+}
+
+.cert-modal-dialog {
+  position: relative;
+  z-index: 2;
+  width: min(980px, 96vw);
+  max-height: 90vh;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 62%);
+  background: color-mix(in srgb, var(--background-color), #000 10%);
+  overflow: hidden;
+  transform: translateY(22px) scale(0.98);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.cert-modal.is-open .cert-modal-backdrop {
+  opacity: 1;
+}
+
+.cert-modal.is-open .cert-modal-dialog {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.cert-modal-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 16px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 82%);
+}
+
+.cert-modal-title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.cert-modal-meta {
+  margin: 4px 0 0;
+  font-size: 0.86rem;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.cert-modal-close {
+  border: 0;
+  border-radius: 8px;
+  width: 38px;
+  height: 38px;
+  background: color-mix(in srgb, var(--surface-color), transparent 20%);
+  color: var(--default-color);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.cert-modal-frame-wrap {
+  height: min(78vh, 980px);
+}
+
+.cert-modal-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #111;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .cert-preview {
+    min-height: 240px;
+  }
+
+  .cert-overlay {
+    opacity: 1;
+    transform: none;
+    padding: 16px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 20%, rgba(0, 0, 0, 0.82) 100%);
+  }
+}
