@@ -27,6 +27,111 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    .resume-hero {
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 65%);
+      border-radius: 16px;
+      padding: 26px;
+      background: radial-gradient(circle at 12% 10%, rgba(19, 135, 193, 0.24), transparent 42%),
+        linear-gradient(145deg, #13222c, #1a2d39 52%, #12212a);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+      margin-bottom: 28px;
+    }
+
+    .resume-kicker {
+      display: inline-block;
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--accent-color);
+      margin-bottom: 10px;
+    }
+
+    .resume-hero h3 {
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
+
+    .resume-hero p {
+      margin-bottom: 12px;
+    }
+
+    .resume-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .resume-link-btn {
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 30%);
+      border-radius: 999px;
+      padding: 8px 14px;
+      color: var(--default-color);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .resume-link-btn:hover {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      transform: translateY(-2px);
+    }
+
+    .resume-proof-grid {
+      margin-bottom: 24px;
+    }
+
+    .resume-proof-card {
+      height: 100%;
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+      border-radius: 14px;
+      padding: 18px;
+      background: color-mix(in srgb, var(--surface-color), transparent 10%);
+    }
+
+    .resume-proof-card h4 {
+      margin: 0;
+      font-size: 1.7rem;
+      color: var(--accent-color);
+    }
+
+    .resume-proof-card p {
+      margin: 6px 0 0;
+      font-size: 0.9rem;
+    }
+
+    .resume-edge {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 14px;
+    }
+
+    .resume-edge span {
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 40%);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.82rem;
+      background: color-mix(in srgb, var(--accent-color), transparent 86%);
+    }
+
+    @media (max-width: 768px) {
+      .resume-hero {
+        padding: 20px;
+      }
+
+      .resume-hero h3 {
+        font-size: 1.45rem;
+      }
+    }
+  </style>
+
 </head>
 
 <body class="resume-page">
@@ -68,13 +173,54 @@
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
         <p>
-          Full-stack developer and AIML student with strong experience in the MERN stack, Python and data-driven applications.
-          Skilled in building scalable web platforms, integrating REST APIs, implementing secure authentication, and applying
-          machine learning techniques to real-world problems.
+          Frontend-focused Full Stack Developer building scalable web products and AI-powered systems with modern frameworks,
+          REST APIs, and LLM integration. I focus on production-ready execution through prompt engineering, RAG pipelines,
+          and data-driven architecture for real user impact.
         </p>
+        
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="resume-hero" data-aos="zoom-in" data-aos-delay="120">
+          <span class="resume-kicker">Arya Mehta | Frontend-Focused Full Stack Developer</span>
+          <h3>Building AI-Driven Products With Production Mindset</h3>
+          <p>
+            I design practical systems where polished frontend experiences meet scalable backend engineering and dependable AI workflows.
+          </p>
+          <div class="resume-edge">
+            <span>LLM + RAG Workflows</span>
+            <span>MERN + FastAPI Architecture</span>
+            <span>API-First Product Thinking</span>
+            <span>Hackathon-Proven Execution</span>
+          </div>
+          <div class="resume-links">
+            <a class="resume-link-btn" href="assets/img/pdf/AryaMehta_23aiml036_Resume.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> View Latest Resume</a>
+            <a class="resume-link-btn" href="assets/img/pdf/AryaMehta_23aiml036_Resume.pdf" download="AryaMehta_23aiml036_Resume.pdf"><i class="bi bi-download"></i> Download PDF</a>
+            <a class="resume-link-btn" href="contact.html"><i class="bi bi-send"></i> Contact Me</a>
+          </div>
+        </div>
+
+        <div class="row g-3 resume-proof-grid" data-aos="fade-up" data-aos-delay="140">
+          <div class="col-md-4">
+            <article class="resume-proof-card">
+              <h4>3+</h4>
+              <p>Flagship projects with AI + full-stack implementation and deployment focus.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="resume-proof-card">
+              <h4>2026</h4>
+              <p>WiBD GenAI Hackathon winner with a practical, weather-adaptive AI assistant.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="resume-proof-card">
+              <h4>1 Internship</h4>
+              <p>Professional frontend engineering experience in React.js and API integration.</p>
+            </article>
+          </div>
+        </div>
 
         <div class="row">
           <div class="col-lg-6">
@@ -87,34 +233,33 @@
 
                 <article class="education-item">
                   <h4>B.Tech in Artificial Intelligence & Machine Learning</h4>
-                  <h5>2023 - Present</h5>
+                  <h5>2023 - 2027</h5>
                   <p class="institution"><em>Charotar University of Science and Technology (CHARUSAT)</em></p>
                   <p>
-                    Pursuing B.Tech in AIML (3rd year) with a CGPA of 8.75. Actively building projects in machine learning,
-                    full-stack web development and data-driven applications, focusing on applying concepts to practical problems.
+                    CGPA: 7.73
                   </p>
-                </article>
-
-                <article class="education-item">
-                  <h4>Higher Secondary (HSC) - Science</h4>
-                  <h5>Completed</h5>
-                  <p class="institution"><em>AB School, Navsari</em></p>
                   <p>
-                    Completed HSC with 88.87% in the Science stream, building a strong foundation in mathematics, physics and logical reasoning.
-                  </p>
-                </article>
-
-                <article class="education-item">
-                  <h4>Secondary School (SSC)</h4>
-                  <h5>Completed</h5>
-                  <p class="institution"><em>AB School, Navsari</em></p>
-                  <p>
-                    Completed SSC with 80%, developing core academic fundamentals and early interest in programming and technology.
+                    Relevant Coursework: Data Structures, Database Management Systems, Machine Learning, Operating Systems.
                   </p>
                 </article>
 
               </div>
             </div><!-- End Education Section -->
+
+            <div class="resume-item" data-aos="fade-up">
+              <h3 class="resume-title">Technical Skills</h3>
+
+              <div class="resume-content">
+                <article class="experience-item">
+                  <p><strong>Languages:</strong> Python, JavaScript, SQL, C/C++, Java</p>
+                  <p><strong>Frontend:</strong> React.js, HTML, CSS, Redux</p>
+                  <p><strong>Backend:</strong> Node.js, Express, FastAPI, Flask, PHP (Working Knowledge), REST APIs</p>
+                  <p><strong>AI/ML:</strong> Machine Learning, Regression, Classification, Feature Engineering, RAG, Prompt Engineering, Embeddings, LLMs Integration (OpenAI, Hugging Face)</p>
+                  <p><strong>Databases:</strong> MongoDB, MySQL, PostgreSQL, Firebase, Supabase</p>
+                  <p><strong>Tools & Concepts:</strong> Git, API Integration, Data Pipelines, Distributed Systems, Linux (Basic), Deployment</p>
+                </article>
+              </div>
+            </div><!-- End Technical Skills Section -->
 
             <!-- Professional Skills Section -->
             <div class="resume-item skills-animation" data-aos="fade-up">
@@ -160,50 +305,49 @@
               <div class="resume-content">
 
                 <article class="experience-item">
-                  <h4>Stock Price Predictor</h4>
-                  <h5>Academic Project</h5>
-                  <p class="company"><em>Python, Flask, XGBoost, yFinance, Pandas, NumPy</em></p>
+                  <h4>Multi-Agent AIOps Platform</h4>
+                  <h5>Project</h5>
+                  <p class="company"><em>GitHub: <a href="https://github.com/aryamehta0302/AI-OPS.git" target="_blank">View Repository</a></em></p>
                   <ul>
-                    <li>Developed a machine-learning powered stock forecast web application that predicts next-day closing prices using historical market data.</li>
-                    <li>Implemented XGBoost regression with data processing pipelines using Pandas and NumPy for robust model training and evaluation.</li>
-                    <li>Built a responsive UI with HTML, CSS and JavaScript and integrated Flask for backend routing and deployment.</li>
-                    <li>Added live market tracking with auto-refresh, dark/light theme support and validation for invalid stock tickers to enhance user experience.</li>
+                    <li>Engineered real-time AIOps platform leveraging ML-based data pipelines for anomaly detection and automated incident management.</li>
+                    <li>Architected distributed backend with REST APIs, enabling predictive analytics, system monitoring, and dashboard visualization.</li>
                   </ul>
                 </article>
 
                 <article class="experience-item">
-                  <h4>Blogspot – Blogging Platform</h4>
-                  <h5>Academic Project</h5>
-                  <p class="company"><em>Full-Stack Web App, CRUD, RESTful Routes, UI/UX</em></p>
+                  <h4>Chronos - AI Planning Assistant</h4>
+                  <h5>Project</h5>
+                  <p class="company"><em>GitHub: <a href="https://github.com/aryamehta0302/Chronos.git" target="_blank">View Repository</a></em></p>
                   <ul>
-                    <li>Designed and developed a full-stack blogging platform enabling users to create, update and manage posts in a CMS-style interface.</li>
-                    <li>Implemented complete CRUD functionality with clean routing, structured content categories and improved publishing workflow.</li>
-                    <li>Focused on responsive UI, consistent component styling and better readability for longer-form content.</li>
-                    <li>Optimized backend handling for smooth navigation between posts and better overall user experience.</li>
+                    <li>Created LLM-powered assistant utilizing prompt engineering and context-aware reasoning for intelligent planning workflows.</li>
+                    <li>Integrated real-time weather APIs with caching, structured data handling, and optimized response generation.</li>
                   </ul>
                 </article>
 
                 <article class="experience-item">
-                  <h4>EcommerceStore – Trend Mart</h4>
-                  <h5>Academic Project</h5>
-                  <p class="company"><em>E-commerce, Product Catalog, Cart System, API Integration</em></p>
+                  <h4>TrendMart - MERN E-Commerce</h4>
+                  <h5>Project</h5>
+                  <p class="company"><em>GitHub: <a href="https://github.com/aryamehta0302/EcommerceStore" target="_blank">View Repository</a> | Live: <a href="https://ecommerce-store-drab-pi.vercel.app/" target="_blank">View Project</a></em></p>
                   <ul>
-                    <li>Built a full-stack e-commerce application featuring product listings, search and filtering, cart management and checkout simulation.</li>
-                    <li>Designed backend APIs and integrated them with the frontend to ensure smooth data flow between catalog, cart and orders.</li>
-                    <li>Structured the project with scalability in mind, using modular components and clear separation of concerns.</li>
-                    <li>Demonstrated understanding of real-world e-commerce workflows and data handling patterns.</li>
+                    <li>Implemented full-stack MERN application with React.js, Node.js, MongoDB, JWT authentication, and role-based access control.</li>
+                    <li>Developed RESTful APIs, enhanced database performance, and deployed scalable production-ready infrastructure.</li>
                   </ul>
                 </article>
 
                 <article class="experience-item">
-                  <h4>AIML Department Chatbot</h4>
-                  <h5>Academic Project</h5>
-                  <p class="company"><em>Chatbot, Conversational AI, Automation, Student Support</em></p>
+                  <h4>Winner - WiBD GenAI Hackathon 2026 (Team HackIconics)</h4>
+                  <h5>Achievement</h5>
                   <ul>
-                    <li>Created an AI-powered chatbot to automate responses for frequently asked queries related to the AIML department.</li>
-                    <li>Designed conversation flows, intents and fallback handling to simulate human-like interaction and deliver relevant answers.</li>
-                    <li>Helped reduce manual support workload and improve accessibility of department information for students and visitors.</li>
-                    <li>Experimented with NLP-style logic such as TF-IDF based matching for query understanding and response selection.</li>
+                    <li>Developed Chronos, an AI-driven weather-adaptive planning assistant utilizing LLM reasoning and structured validation.</li>
+                  </ul>
+                </article>
+
+                <article class="experience-item">
+                  <h4>Frontend Developer Intern - Antim Technology LLP</h4>
+                  <h5>May 2025 - June 2025</h5>
+                  <ul>
+                    <li>Developed reusable React.js components and integrated REST APIs, improving modularity, maintainability, and frontend performance.</li>
+                    <li>Collaborated on feature development, debugging, and optimization, enhancing application responsiveness and development workflow efficiency.</li>
                   </ul>
                 </article>
 
