@@ -1,17 +1,38 @@
+async function parseJsonBody(req) {
+  if (req.body && typeof req.body === 'object') {
+    return req.body;
+  }
+
+  if (typeof req.body === 'string' && req.body.trim()) {
+    return JSON.parse(req.body);
+  }
+
+  const chunks = [];
+  for await (const chunk of req) {
+    chunks.push(chunk);
+  }
+  const raw = Buffer.concat(chunks).toString('utf8');
+  return raw ? JSON.parse(raw) : {};
+}
+
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ success: false, error: 'Method not allowed' });
   }
 
   try {
-    const body = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {});
+    const body = await parseJsonBody(req);
     const name = (body.name || '').trim();
     const email = (body.email || '').trim();
     const subject = (body.subject || 'Contact message').trim();
     const message = (body.message || '').trim();
 
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     if (!name || !email || !message) {
       return res.status(400).json({ success: false, error: 'Missing required fields' });
+    }
+    if (!emailOk) {
+      return res.status(400).json({ success: false, error: 'Invalid email format' });
     }
 
     // Hardcoded EmailJS configuration (as requested)
@@ -42,11 +63,11 @@ module.exports = async (req, res) => {
 
     const raw = await emailResp.text();
     if (!emailResp.ok) {
-      return res.status(emailResp.status).json({ success: false, error: 'EmailJS API failed', detail: raw });
+      return res.status(emailResp.status).json({ success: false, error: 'EmailJS API failed', detail: raw || 'No response body from EmailJS' });
     }
 
     return res.status(200).json({ success: true });
   } catch (error) {
-    return res.status(500).json({ success: false, error: 'Server error', detail: String(error) });
+    return res.status(500).json({ success: false, error: 'Server error', detail: String(error && error.message ? error.message : error) });
   }
 };

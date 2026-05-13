@@ -9,6 +9,7 @@
     const message = document.getElementById('message').value.trim();
 
     // 1) Try Vercel serverless API endpoint (direct send)
+    let apiErrorMessage = '';
     try {
       const resp = await fetch('/api/send-email', {
         method: 'POST',
@@ -24,8 +25,10 @@
         document.querySelector('form').reset();
         return;
       }
+      apiErrorMessage = (data && (data.error || data.detail)) ? `${data.error || 'API error'}${data.detail ? `: ${data.detail}` : ''}` : 'Unknown API error';
       console.warn('Server API send failed:', data);
     } catch (err) {
+      apiErrorMessage = String(err && err.message ? err.message : err);
       console.warn('Vercel API endpoint not available or failed:', err);
     }
 
@@ -41,7 +44,8 @@
           from_name: name,
           from_email: email,
           subject: subject,
-          message: message
+          message: message,
+          to_email: 'mehtarya60@gmail.com'
         };
 
         await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
@@ -50,10 +54,11 @@
         return;
       } catch (err) {
         console.error('EmailJS error:', err);
-        alert('Could not send message right now. Please try again in a moment.');
+        const fallbackErr = String(err && err.text ? err.text : (err && err.message ? err.message : err));
+        alert(`Could not send message right now. API: ${apiErrorMessage || 'failed'}. EmailJS: ${fallbackErr}`);
       }
     }
-    alert('Unable to send message right now. Please try again later.');
+    alert(`Unable to send message right now. API error: ${apiErrorMessage || 'No details available'}`);
   }
 
   // Expose sendEmail to global scope for inline form handler
