@@ -175,23 +175,10 @@
 
   <script src="assets/js/main.js"></script>
 
-  <!-- 🚀 Mailto Script -->
-  <script>
-    function sendEmail(event) {
-      event.preventDefault();
-
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const subject = document.getElementById("subject").value;
-      const message = document.getElementById("message").value;
-
-      const mailtoLink = `mailto:mehtarya60@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-        "Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message
-      )}`;
-
-      window.location.href = mailtoLink;
-    }
-  </script>
+  <!-- EmailJS + Contact script -->
+  <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+  <script src="assets/js/email-config.js"></script>
+  <script src="assets/js/contact.js"></script>
 
 </body>
 </html>
