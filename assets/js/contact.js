@@ -10,6 +10,7 @@
 
     // 1) Try Vercel serverless API endpoint (direct send)
     let apiErrorMessage = '';
+    let apiStatus = 'n/a';
     try {
       const resp = await fetch('/api/send-email', {
         method: 'POST',
@@ -20,6 +21,7 @@
       });
 
       const data = await resp.json().catch(() => ({}));
+      apiStatus = String(resp.status);
       if (resp.ok && data.success) {
         alert('Message sent successfully — thank you!');
         document.querySelector('form').reset();
@@ -55,10 +57,10 @@
       } catch (err) {
         console.error('EmailJS error:', err);
         const fallbackErr = String(err && err.text ? err.text : (err && err.message ? err.message : err));
-        alert(`Could not send message right now. API: ${apiErrorMessage || 'failed'}. EmailJS: ${fallbackErr}`);
+        alert(`[Contact v2] Send failed. API status: ${apiStatus}. API: ${apiErrorMessage || 'failed'}. EmailJS: ${fallbackErr}`);
       }
     }
-    alert(`Unable to send message right now. API error: ${apiErrorMessage || 'No details available'}`);
+    alert(`[Contact v2] Send failed. API status: ${apiStatus}. API error: ${apiErrorMessage || 'No details available'}`);
   }
 
   // Expose sendEmail to global scope for inline form handler
