@@ -1,4 +1,4 @@
-// contact.js — handles sending contact form via Vercel API first, then EmailJS client fallback
+// contact.js — handles sending contact form via Vercel API
 (function () {
   async function sendEmail(event) {
     event.preventDefault();
@@ -34,33 +34,7 @@
       console.warn('Vercel API endpoint not available or failed:', err);
     }
 
-    // 2) Try EmailJS client fallback
-    if (typeof USE_EMAILJS !== 'undefined' && USE_EMAILJS && EMAILJS_USER_ID && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID) {
-      try {
-        if (window.emailjs && !window.emailjs.__initialized) {
-          emailjs.init(EMAILJS_USER_ID);
-          window.emailjs.__initialized = true;
-        }
-
-        const templateParams = {
-          from_name: name,
-          from_email: email,
-          subject: subject,
-          message: message,
-          to_email: 'mehtarya60@gmail.com'
-        };
-
-        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
-        alert('Message sent — thank you!');
-        document.querySelector('form').reset();
-        return;
-      } catch (err) {
-        console.error('EmailJS error:', err);
-        const fallbackErr = String(err && err.text ? err.text : (err && err.message ? err.message : err));
-        alert(`[Contact v2] Send failed. API status: ${apiStatus}. API: ${apiErrorMessage || 'failed'}. EmailJS: ${fallbackErr}`);
-      }
-    }
-    alert(`[Contact v2] Send failed. API status: ${apiStatus}. API error: ${apiErrorMessage || 'No details available'}`);
+    alert(`[Contact v3] Send failed. API status: ${apiStatus}. API error: ${apiErrorMessage || 'No details available'}`);
   }
 
   // Expose sendEmail to global scope for inline form handler

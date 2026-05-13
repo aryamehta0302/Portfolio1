@@ -41,6 +41,8 @@ module.exports = async (req, res) => {
     const EMAILJS_PUBLIC_KEY = 'tC7H9CsmDu6d6eTpG';
     const EMAILJS_PRIVATE_KEY = '-aVP_MnYh1XJ90m5gv2Ir';
 
+    const fixedRecipient = 'mehtarya60@gmail.com';
+
     const payload = {
       service_id: EMAILJS_SERVICE_ID,
       template_id: EMAILJS_TEMPLATE_ID,
@@ -48,9 +50,15 @@ module.exports = async (req, res) => {
       template_params: {
         from_name: name,
         from_email: email,
+        reply_to: email,
         subject,
         message,
-        to_email: 'mehtarya60@gmail.com'
+        // Recipient aliases to support different EmailJS template variable names.
+        to_email: fixedRecipient,
+        to: fixedRecipient,
+        email: fixedRecipient,
+        recipient_email: fixedRecipient,
+        recipient: fixedRecipient
       },
       accessToken: EMAILJS_PRIVATE_KEY
     };
