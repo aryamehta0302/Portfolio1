@@ -1,4 +1,4 @@
-// contact.js — handles sending contact form via EmailJS or fallback to mailto
+// contact.js — handles sending contact form via Vercel API first, then EmailJS client fallback
 (function () {
   async function sendEmail(event) {
     event.preventDefault();
@@ -8,31 +8,28 @@
     const subject = document.getElementById('subject').value.trim();
     const message = document.getElementById('message').value.trim();
 
-    // 1) Try server-side PHP endpoint (direct send) if available
+    // 1) Try Vercel serverless API endpoint (direct send)
     try {
-      const resp = await fetch('assets/php/send_mail.php', {
+      const resp = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
+          'Content-Type': 'application/json'
         },
-        body: new URLSearchParams({ name, email, subject, message })
+        body: JSON.stringify({ name, email, subject, message })
       });
 
-      if (resp.ok) {
-        const data = await resp.json();
-        if (data.success) {
-          alert('Message sent successfully — thank you!');
-          document.querySelector('form').reset();
-          return;
-        }
+      const data = await resp.json().catch(() => ({}));
+      if (resp.ok && data.success) {
+        alert('Message sent successfully — thank you!');
+        document.querySelector('form').reset();
+        return;
       }
-      // If server responded but not ok, fall through to other methods
+      console.warn('Server API send failed:', data);
     } catch (err) {
-      // Network error or PHP not available — continue to EmailJS or mailto
-      console.warn('PHP endpoint not available or failed:', err);
+      console.warn('Vercel API endpoint not available or failed:', err);
     }
 
-    // 2) Try EmailJS if configured
+    // 2) Try EmailJS client fallback
     if (typeof USE_EMAILJS !== 'undefined' && USE_EMAILJS && EMAILJS_USER_ID && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID) {
       try {
         if (window.emailjs && !window.emailjs.__initialized) {
@@ -53,18 +50,10 @@
         return;
       } catch (err) {
         console.error('EmailJS error:', err);
-        alert('Could not send message via EmailJS. Falling back to mail client.');
+        alert('Could not send message right now. Please try again in a moment.');
       }
     }
-
-    // 3) Final fallback: open mail client (mailto)
-    fallbackMail(name, email, subject, message);
-  }
-
-  function fallbackMail(name, email, subject, message) {
-    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-    const mailtoLink = `mailto:mehtarya60@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
+    alert('Unable to send message right now. Please try again later.');
   }
 
   // Expose sendEmail to global scope for inline form handler
