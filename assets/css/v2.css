@@ -1,4 +1,9 @@
-html, body { overflow-x: hidden; width: 100%; position: relative; }\n/* ==========================================================================
+html, body { 
+  overflow-x: hidden; 
+  width: 100%; 
+}
+
+/* ==========================================================================
    Portfolio V2 — Design System & Component Styles
    Loaded AFTER main.css. Overrides and extends the existing design system.
    ========================================================================== */
