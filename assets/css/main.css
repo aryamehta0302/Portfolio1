@@ -198,6 +198,11 @@ h6 {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
+body.mobile-nav-active .header {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
