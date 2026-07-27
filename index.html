@@ -26,19 +26,27 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  
+  <!-- V2 Design System CSS -->
+  <link href="assets/css/v2.css" rel="stylesheet">
 
-
+  <meta property="og:title" content="Arya Mehta | AI & Full-Stack Engineer">
+  <meta property="og:description" content="Portfolio of Arya Mehta, an AI & Full-Stack Engineer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aryamehta0302.github.io/">
+  <meta property="og:image" content="https://aryamehta0302.github.io/assets/img/profile-img.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arya Mehta | AI & Full-Stack Engineer">
+  <meta name="twitter:description" content="Portfolio of Arya Mehta, an AI & Full-Stack Engineer.">
+  <meta name="twitter:image" content="https://aryamehta0302.github.io/assets/img/profile-img.jpg">
 </head>
 
-<body class="index-page">
+<body class="index-page v2-header-enhanced v2-footer-enhanced">
+  <!-- Skip to content for accessibility -->
+  <a href="#hero" class="v2-skip-link">Skip to content</a>
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
-
-      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="assets/img/logo.webp" alt="">
-      <h1 class="sitename">FolioOne</h1> 
-    </a> -->
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -46,17 +54,19 @@
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
           <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          
           <li><a href="certification.html">Certifications</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/0_aryamehta_0/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <div class="header-social-links">
+        <a href="https://github.com/aryamehta0302" class="github"><i class="bi bi-github"></i></a>
         <a href="https://www.linkedin.com/in/arya-mehta-2849532a1/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/0_aryamehta_0/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://facebook.com/" class="facebook"><i class="bi bi-facebook"></i></a>
       </div>
 
     </div>
@@ -65,46 +75,73 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <section id="hero" class="hero section dark-background position-relative overflow-hidden">
+      
+      <!-- Ambient Lighting -->
+      <div class="v2-ambient-orb v2-ambient-orb--blue" style="width: 60vw; height: 60vw; top: -20%; left: -10%;"></div>
+      <div class="v2-ambient-orb v2-ambient-orb--teal" style="width: 40vw; height: 40vw; bottom: -10%; right: -5%;"></div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container position-relative z-1" style="padding-top: 4rem;">
+        <div class="row gy-5 align-items-center">
+          
+          <!-- Left Content -->
+          <div class="col-lg-7 order-2 order-lg-1">
+            <div class="hero-content pe-lg-5">
+              
+              <div class="v2-section-header__kicker v2-reveal">SYSTEM ARCHITECT & AI ENGINEER</div>
+              
+              <h1 class="v2-section-header__title text-start mb-4 v2-reveal v2-reveal--delay-1">
+                Arya Mehta<br>
+                <span id="hero-gooey-morph" class="highlight" style="display:inline-block; min-width: 320px;"></span>
+              </h1>
+              
+              <p class="lead mb-5 v2-reveal v2-reveal--delay-2" style="color: var(--v2-text-secondary); max-width: 540px;">
+                I architect and ship production AI systems and scalable web applications. Currently building at Dezai as Chief Technology Officer, turning complex problems into elegant technical solutions.
+              </p>
 
-        <div class="row gy-4 align-items-center">
-          <div class="col-lg-6 order-2 order-lg-1">
-            <div class="hero-content">
-              <h1 data-aos="fade-up" data-aos-delay="200">Hello, I'm <span class="highlight">Arya Mehta</span></h1>
-              <h2 data-aos="fade-up" data-aos-delay="300">Creative <span class="typed" data-typed-items="UI/UX Designer, Web Developer, AI Engineer, Project Planner"></span></h2>
-              <p data-aos="fade-up" data-aos-delay="400">
-  A 3rd year AIML engineering student passionate about building smart applications that solve real problems. 
-  I love combining machine learning with sleek front-end experiences to create fast, intuitive and reliable digital products while constantly exploring new technologies.
-</p>
-
-              <div class="hero-actions" data-aos="fade-up" data-aos-delay="500">
-                <a href="portfolio.html" class="btn btn-primary">View My Work</a>
-                <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+              <div class="d-flex flex-wrap gap-3 mb-5 v2-reveal v2-reveal--delay-3">
+                <a href="portfolio.html" class="v2-btn v2-btn--primary">
+                  Explore Work <i class="bi bi-arrow-right"></i>
+                </a>
+                <a href="about.html" class="v2-btn v2-btn--outline-accent">
+                  My Journey
+                </a>
               </div>
-              <div class="social-links" data-aos="fade-up" data-aos-delay="600">
-                <a href="#"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/arya-mehta-2849532a1/"><i class="bi bi-linkedin"></i></a>
-                <a href="https://github.com/aryamehta0302"><i class="bi bi-github"></i></a>
-                <a href="about.html"><i class="bi bi-dribbble"></i></a>
+              
+              <!-- Proof Metrics Row -->
+              <div class="v2-proof-row v2-reveal v2-reveal--delay-4">
+                <div class="v2-proof-item">
+                  <div class="v2-proof-item__number">CTO</div>
+                  <div class="v2-proof-item__label">At Dezai</div>
+                </div>
+                <div class="v2-proof-item">
+                  <div class="v2-proof-item__number">5+</div>
+                  <div class="v2-proof-item__label">Roles & Internships</div>
+                </div>
+                <div class="v2-proof-item">
+                  <div class="v2-proof-item__number">Winner</div>
+                  <div class="v2-proof-item__label">WiBD GenAI Hackathon</div>
+                </div>
               </div>
+              
             </div>
           </div>
-          <div class="col-lg-6 order-1 order-lg-2">
-            <div class="hero-image" data-aos="zoom-in" data-aos-delay="300">
-              <div class="image-wrapper">
-                <img src="assets/img/profile/profile-square-11.png" alt="Arya Mehta" class="img-fluid">
+          
+          <!-- Right Content (Visuals & Profile) -->
+          <div class="col-lg-5 order-1 order-lg-2">
+            <div class="hero-image position-relative v2-reveal v2-reveal--delay-2 mx-auto" style="max-width: 420px;">
+              <div class="image-wrapper position-relative">
+                <img src="assets/img/profile/profile-square-11.png" alt="Arya Mehta" class="img-fluid rounded w-100" loading="eager">
                 <div class="floating-elements">
-                  <div class="floating-card design" data-aos="fade-left" data-aos-delay="700">
+                  <div class="floating-card design v2-float" style="animation-delay: 0s;" data-aos="fade-left" data-aos-delay="700">
                     <i class="bi bi-palette"></i>
                     <span>Design</span>
                   </div>
-                  <div class="floating-card code" data-aos="fade-right" data-aos-delay="800">
+                  <div class="floating-card code v2-float" style="animation-delay: 1.5s;" data-aos="fade-right" data-aos-delay="800">
                     <i class="bi bi-code-slash"></i>
                     <span>Code</span>
                   </div>
-                  <div class="floating-card creativity" data-aos="fade-up" data-aos-delay="900">
+                  <div class="floating-card creativity v2-float" style="animation-delay: 3s;" data-aos="fade-up" data-aos-delay="900">
                     <i class="bi bi-lightbulb"></i>
                     <span>Ideas</span>
                   </div>
@@ -112,29 +149,26 @@
               </div>
             </div>
           </div>
+          
         </div>
-
       </div>
-
-    </section><!-- /Hero Section -->
+    </section>
 
   </main>
 
-  <footer id="footer" class="footer">
-
+    <footer id="footer" class="footer">
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Arya Mehta</strong> <span>All Rights Reserved<br></span></p>
+      <div class="copyright text-center">
+        <p>© <strong class="px-1 sitename">Arya Mehta</strong> — All Rights Reserved</p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/0_aryamehta_0/"><i class="bi bi-instagram"></i></a>
+        <a href="https://github.com/aryamehta0302"><i class="bi bi-github"></i></a>
         <a href="https://www.linkedin.com/in/arya-mehta-2849532a1/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/0_aryamehta_0/"><i class="bi bi-instagram"></i></a>
+        <a href="https://facebook.com/"><i class="bi bi-facebook"></i></a>
         <a href="certification.html" title="Certifications"><i class="bi bi-patch-check"></i></a>
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
@@ -157,6 +191,28 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- V2 Engine -->
+  <script src="assets/js/v2.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Init hero text morph
+      if (window.V2 && window.V2.GooeyMorph) {
+        new window.V2.GooeyMorph('hero-gooey-morph', [
+          'System Architect',
+          'Creative Developer',
+          'AI Engineer',
+          'Product Designer'
+        ], 3500);
+      }
+      
+      // Update footer year dynamically
+      const yearSpan = document.querySelector('.copyright span:first-child');
+      if (yearSpan) {
+        yearSpan.innerHTML = `Copyright &copy; ${new Date().getFullYear()}`;
+      }
+    });
+  </script>
 
 </body>
 

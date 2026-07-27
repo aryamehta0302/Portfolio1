@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Engineering Notebook – Arya Mehta</title>
+  <meta name="description" content="Engineering blog and knowledge base of Arya Mehta.">
+  <meta name="keywords" content="Blog, Engineering, AI, Next.js, MERN, System Architecture">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/v2.css" rel="stylesheet">
+
+  <meta property="og:title" content="Arya Mehta | AI & Full-Stack Engineer">
+  <meta property="og:description" content="Portfolio of Arya Mehta, an AI & Full-Stack Engineer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aryamehta0302.github.io/">
+  <meta property="og:image" content="https://aryamehta0302.github.io/assets/img/profile-img.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arya Mehta | AI & Full-Stack Engineer">
+  <meta name="twitter:description" content="Portfolio of Arya Mehta, an AI & Full-Stack Engineer.">
+  <meta name="twitter:image" content="https://aryamehta0302.github.io/assets/img/profile-img.jpg">
+</head>
+
+<body class="blog-page v2-header-enhanced v2-footer-enhanced">
+  <a href="#blog-list" class="v2-skip-link">Skip to content</a>
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          
+          <li><a href="certification.html">Certifications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+            <div class="header-social-links">
+        <a href="https://github.com/aryamehta0302" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/arya-mehta-2849532a1/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/0_aryamehta_0/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://facebook.com/" class="facebook"><i class="bi bi-facebook"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="blog-list" class="section">
+      <div class="container v2-section-header v2-reveal">
+        <div class="v2-section-header__kicker">KNOWLEDGE BASE</div>
+        <h2 class="v2-section-header__title">Engineering Notebook</h2>
+        <p class="v2-section-header__subtitle">Thoughts on system architecture, applied AI, and building production-ready applications.</p>
+      </div>
+
+      <div class="container v2-reveal v2-reveal--delay-1">
+        <div class="row g-4" id="blog-grid">
+          <!-- Blog items will be injected here by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <strong class="px-1 sitename">Arya Mehta</strong> — All Rights Reserved</p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/aryamehta0302"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/arya-mehta-2849532a1/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/0_aryamehta_0/"><i class="bi bi-instagram"></i></a>
+        <a href="https://facebook.com/"><i class="bi bi-facebook"></i></a>
+        <a href="certification.html" title="Certifications"><i class="bi bi-patch-check"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  
+  <!-- V2 Engine & Blog Data -->
+  <script src="assets/js/v2.js"></script>
+  <script src="assets/js/blog-data.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearSpan = document.querySelector('.copyright span:first-child');
+      if (yearSpan) yearSpan.innerHTML = `Copyright &copy; ${new Date().getFullYear()}`;
+
+      // Render Blog Grid
+      const grid = document.getElementById('blog-grid');
+      if (grid && window.BlogData) {
+        window.BlogData.forEach(article => {
+          const col = document.createElement('div');
+          col.className = 'col-lg-4 col-md-6';
+          
+          col.innerHTML = `
+            <a href="article.html?id=${article.id}" class="text-decoration-none h-100 d-block">
+              <div class="v2-card h-100 d-flex flex-column v2-card--hover-lift">
+                <div class="mb-3 d-flex align-items-center gap-2">
+                  <span class="v2-tag" style="background: var(--v2-accent); color: #000; border: none; font-weight: 600;">${article.category}</span>
+                  <span style="color: var(--v2-text-tertiary); font-size: 0.8rem;">${article.date}</span>
+                </div>
+                <h3 style="font-family: var(--v2-font-heading); font-size: 1.25rem; font-weight: 600; color: var(--v2-text-primary); margin-bottom: 0.75rem;">${article.title}</h3>
+                <p style="color: var(--v2-text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">${article.summary}</p>
+                <div style="color: var(--v2-accent); font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; margin-top: auto;">
+                  Read Article <i class="bi bi-arrow-right"></i>
+                </div>
+              </div>
+            </a>
+          `;
+          grid.appendChild(col);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

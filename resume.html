@@ -26,115 +26,13 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/v2.css" rel="stylesheet">
 
-  <style>
-    .resume-hero {
-      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 65%);
-      border-radius: 16px;
-      padding: 26px;
-      background: radial-gradient(circle at 12% 10%, rgba(19, 135, 193, 0.24), transparent 42%),
-        linear-gradient(145deg, #13222c, #1a2d39 52%, #12212a);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
-      margin-bottom: 28px;
-    }
-
-    .resume-kicker {
-      display: inline-block;
-      font-size: 0.76rem;
-      letter-spacing: 0.08em;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      margin-bottom: 10px;
-    }
-
-    .resume-hero h3 {
-      margin-bottom: 10px;
-      font-size: 1.8rem;
-    }
-
-    .resume-hero p {
-      margin-bottom: 12px;
-    }
-
-    .resume-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .resume-link-btn {
-      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 30%);
-      border-radius: 999px;
-      padding: 8px 14px;
-      color: var(--default-color);
-      font-size: 0.88rem;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-    }
-
-    .resume-link-btn:hover {
-      background: var(--accent-color);
-      color: var(--contrast-color);
-      transform: translateY(-2px);
-    }
-
-    .resume-proof-grid {
-      margin-bottom: 24px;
-    }
-
-    .resume-proof-card {
-      height: 100%;
-      border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-      border-radius: 14px;
-      padding: 18px;
-      background: color-mix(in srgb, var(--surface-color), transparent 10%);
-    }
-
-    .resume-proof-card h4 {
-      margin: 0;
-      font-size: 1.7rem;
-      color: var(--accent-color);
-    }
-
-    .resume-proof-card p {
-      margin: 6px 0 0;
-      font-size: 0.9rem;
-    }
-
-    .resume-edge {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 14px;
-    }
-
-    .resume-edge span {
-      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 40%);
-      border-radius: 999px;
-      padding: 6px 12px;
-      font-size: 0.82rem;
-      background: color-mix(in srgb, var(--accent-color), transparent 86%);
-    }
-
-    @media (max-width: 768px) {
-      .resume-hero {
-        padding: 20px;
-      }
-
-      .resume-hero h3 {
-        font-size: 1.45rem;
-      }
-    }
-  </style>
+  
 
 </head>
 
-<body class="resume-page">
+<body class="resume-page v2-header-enhanced v2-footer-enhanced">
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
@@ -148,17 +46,18 @@
           <li><a href="resume.html" class="active">Resume</a></li>
           
           <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="certification.html">Certifications</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/0_aryamehta_0/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <div class="header-social-links">
+        <a href="https://github.com/aryamehta0302" class="github"><i class="bi bi-github"></i></a>
         <a href="https://www.linkedin.com/in/arya-mehta-2849532a1/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/0_aryamehta_0/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://facebook.com/" class="facebook"><i class="bi bi-facebook"></i></a>
       </div>
 
     </div>
@@ -195,8 +94,8 @@
             <span>Hackathon-Proven Execution</span>
           </div>
           <div class="resume-links">
-            <a class="resume-link-btn" href="assets/img/pdf/AryaMehta_23aiml036_Resume.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> View Latest Resume</a>
-            <a class="resume-link-btn" href="assets/img/pdf/AryaMehta_23aiml036_Resume.pdf" download="AryaMehta_23aiml036_Resume.pdf"><i class="bi bi-download"></i> Download PDF</a>
+            <a class="resume-link-btn" href="assets/img/pdf/Arya%20Mehta%20Resume.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> View Latest Resume</a>
+            <a class="resume-link-btn" href="assets/img/pdf/Arya%20Mehta%20Resume.pdf" download="Arya_Mehta_Resume.pdf"><i class="bi bi-download"></i> Download PDF</a>
             <a class="resume-link-btn" href="contact.html"><i class="bi bi-send"></i> Contact Me</a>
           </div>
         </div>
@@ -362,21 +261,19 @@
 
   </main>
 
-  <footer id="footer" class="footer">
-
+    <footer id="footer" class="footer">
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Arya Mehta</strong> <span>All Rights Reserved<br></span></p>
+      <div class="copyright text-center">
+        <p>© <strong class="px-1 sitename">Arya Mehta</strong> — All Rights Reserved</p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/0_aryamehta_0/"><i class="bi bi-instagram"></i></a>
+        <a href="https://github.com/aryamehta0302"><i class="bi bi-github"></i></a>
         <a href="https://www.linkedin.com/in/arya-mehta-2849532a1/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/0_aryamehta_0/"><i class="bi bi-instagram"></i></a>
+        <a href="https://facebook.com/"><i class="bi bi-facebook"></i></a>
         <a href="certification.html" title="Certifications"><i class="bi bi-patch-check"></i></a>
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
@@ -399,6 +296,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/v2.js"></script>
 
 </body>
 

@@ -22,42 +22,55 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/v2.css" rel="stylesheet">
   <link href="certification.css" rel="stylesheet">
+
+  <meta property="og:title" content="Arya Mehta | AI & Full-Stack Engineer">
+  <meta property="og:description" content="Portfolio of Arya Mehta, an AI & Full-Stack Engineer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aryamehta0302.github.io/">
+  <meta property="og:image" content="https://aryamehta0302.github.io/assets/img/profile-img.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arya Mehta | AI & Full-Stack Engineer">
+  <meta name="twitter:description" content="Portfolio of Arya Mehta, an AI & Full-Stack Engineer.">
+  <meta name="twitter:image" content="https://aryamehta0302.github.io/assets/img/profile-img.jpg">
 </head>
 
-<body class="certification-page">
+<body class="certification-page v2-header-enhanced v2-footer-enhanced">
+  <a href="#certifications-grid" class="v2-skip-link">Skip to content</a>
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
-
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
           <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          
           <li><a href="certification.html" class="active">Certifications</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/0_aryamehta_0/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <div class="header-social-links">
+        <a href="https://github.com/aryamehta0302" class="github"><i class="bi bi-github"></i></a>
         <a href="https://www.linkedin.com/in/arya-mehta-2849532a1/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/0_aryamehta_0/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://facebook.com/" class="facebook"><i class="bi bi-facebook"></i></a>
       </div>
-
     </div>
   </header>
 
   <main class="main">
 
-    <section class="section certification-section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Certifications</h2>
-        <p>Arya Mehta - verified learning milestones across AI, cloud, full stack and professional development.</p>
+    <section id="certifications-grid" class="section certification-section">
+      <div class="container v2-section-header v2-reveal">
+        <div class="v2-section-header__kicker">CREDENTIALS</div>
+        <h2 class="v2-section-header__title">Certifications</h2>
+        <p class="v2-section-header__subtitle">Verified learning milestones across AI, cloud architecture, and full-stack development.</p>
       </div>
 
       <div class="container cert-grid" data-aos="fade-up" data-aos-delay="100">
@@ -273,16 +286,17 @@
 
   </main>
 
-  <footer id="footer" class="footer">
+    <footer id="footer" class="footer">
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Arya Mehta</strong> <span>All Rights Reserved<br></span></p>
+      <div class="copyright text-center">
+        <p>© <strong class="px-1 sitename">Arya Mehta</strong> — All Rights Reserved</p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/0_aryamehta_0/"><i class="bi bi-instagram"></i></a>
+        <a href="https://github.com/aryamehta0302"><i class="bi bi-github"></i></a>
         <a href="https://www.linkedin.com/in/arya-mehta-2849532a1/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/0_aryamehta_0/"><i class="bi bi-instagram"></i></a>
+        <a href="https://facebook.com/"><i class="bi bi-facebook"></i></a>
+        <a href="certification.html" title="Certifications"><i class="bi bi-patch-check"></i></a>
       </div>
     </div>
   </footer>
@@ -321,7 +335,15 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/v2.js"></script>
   <script src="certification.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearSpan = document.querySelector('.copyright span:first-child');
+      if (yearSpan) yearSpan.innerHTML = `Copyright &copy; ${new Date().getFullYear()}`;
+    });
+  </script>
 </body>
 
 </html>

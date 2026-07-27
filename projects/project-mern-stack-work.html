@@ -15,49 +15,12 @@
   <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/v2.css" rel="stylesheet">
 
-  <style>
-    section, .section { overflow: visible !important; }
-    .mermaid-container {
-      background: linear-gradient(135deg, #0d1117, #161b22);
-      border: 1px solid rgba(61, 126, 199, 0.2);
-      border-radius: 12px;
-      padding: 2rem;
-      margin: 2rem auto;
-      overflow-x: auto;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .mermaid-container:hover {
-      border-color: rgba(61, 126, 199, 0.5);
-      box-shadow: 0 0 30px rgba(61, 126, 199, 0.1);
-    }
-    #mermaid-output {
-      display: flex;
-      justify-content: center;
-      min-height: 200px;
-      align-items: center;
-      color: #555;
-    }
-    #mermaid-output svg { height: auto; }
-    .tech-badge {
-      display: inline-block;
-      background: rgba(61, 126, 199, 0.15);
-      color: #7eb8f0;
-      border: 1px solid rgba(61, 126, 199, 0.3);
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      margin: 4px;
-      transition: all 0.3s ease;
-    }
-    .tech-badge:hover {
-      background: rgba(61, 126, 199, 0.3);
-      transform: translateY(-2px);
-    }
-  </style>
+  
 </head>
 
-<body class="portfolio-details-page">
+<body class="portfolio-details-page v2-header-enhanced v2-footer-enhanced">
 
   <!-- Header -->
   <header id="header" class="header d-flex align-items-center dark-background sticky-top">
@@ -67,11 +30,19 @@
           <li><a href="../index.html">Home</a></li>
           <li><a href="../about.html">About</a></li>
           <li><a href="../resume.html">Resume</a></li>
-          <li><a href="../portfolio.html" class="active">Projects</a></li>
+          <li><a href="../portfolio.html">Projects</a></li>
+          <li><a href="../blog.html">Blog</a></li>
                     <li><a href="../certification.html">Certifications</a></li>`r`n          <li><a href="../contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
+      <div class="header-social-links">
+        <a href="https://github.com/aryamehta0302" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/arya-mehta-2849532a1/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/0_aryamehta_0/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://facebook.com/" class="facebook"><i class="bi bi-facebook"></i></a>
+      </div>
     </div>
   </header>
 
@@ -269,9 +240,18 @@
   </main>
 
   <!-- Footer -->
-  <footer id="footer" class="footer">
-    <div class="container text-center">
-      <p>&copy; <strong class="sitename">Arya Mehta</strong> — All Rights Reserved</p>
+    <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <strong class="px-1 sitename">Arya Mehta</strong> — All Rights Reserved</p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/aryamehta0302"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/arya-mehta-2849532a1/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/0_aryamehta_0/"><i class="bi bi-instagram"></i></a>
+        <a href="https://facebook.com/"><i class="bi bi-facebook"></i></a>
+        <a href="../certification.html" title="Certifications"><i class="bi bi-patch-check"></i></a>
+      </div>
     </div>
   </footer>
 
@@ -283,6 +263,7 @@
   <script src="../assets/vendor/aos/aos.js"></script>
   <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/v2.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script>
     mermaid.initialize({ startOnLoad: false, theme: 'dark', flowchart: { useMaxWidth: false, htmlLabels: true, curve: 'basis', padding: 15, nodeSpacing: 60, rankSpacing: 60 }, themeVariables: { darkMode: true, fontSize: '14px', primaryColor: '#1e3a5f', primaryTextColor: '#e0e0e0', primaryBorderColor: '#3d7ec7', lineColor: '#3d7ec7', secondaryColor: '#1a1a2e', tertiaryColor: '#16213e' } });

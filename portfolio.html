@@ -22,79 +22,12 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/v2.css" rel="stylesheet">
 
-  <style>
-    /* Force uniform card heights */
-    .portfolio .isotope-container .portfolio-item {
-      display: flex;
-    }
-    .portfolio .portfolio-card {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      width: 100%;
-    }
-    .portfolio .portfolio-card .portfolio-img {
-      height: 220px;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-    .portfolio .portfolio-card .portfolio-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .portfolio .portfolio-card .portfolio-info {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-    }
-    .portfolio .portfolio-card .portfolio-info h4 {
-      font-size: 1.1rem;
-      min-height: 2.6rem;
-      margin-bottom: 8px;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .portfolio .portfolio-card .portfolio-info p {
-      font-size: 0.88rem;
-      line-height: 1.5;
-      min-height: 2.7rem;
-      max-height: 2.7rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      margin-bottom: 12px;
-    }
-    .portfolio .portfolio-card .portfolio-info .portfolio-tags {
-      margin-top: auto;
-    }
-    .portfolio .portfolio-card .portfolio-info .btn-view-more {
-      background: transparent;
-      color: var(--accent-color);
-      border: 1px solid var(--accent-color);
-      padding: 6px 18px;
-      border-radius: 25px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-    .portfolio .portfolio-card .portfolio-info .btn-view-more:hover {
-      background: var(--accent-color);
-      color: var(--contrast-color);
-      transform: translateY(-2px);
-    }
-  </style>
+  
 </head>
 
-<body class="portfolio-page">
+<body class="portfolio-page v2-header-enhanced v2-footer-enhanced">
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
@@ -105,17 +38,18 @@
           <li><a href="resume.html">Resume</a></li>
           
           <li><a href="portfolio.html" class="active">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="certification.html">Certifications</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/0_aryamehta_0/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <div class="header-social-links">
+        <a href="https://github.com/aryamehta0302" class="github"><i class="bi bi-github"></i></a>
         <a href="https://www.linkedin.com/in/arya-mehta-2849532a1/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/0_aryamehta_0/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://facebook.com/" class="facebook"><i class="bi bi-facebook"></i></a>
       </div>
     </div>
   </header>
@@ -363,17 +297,16 @@
     </section>
   </main>
 
-  <footer id="footer" class="footer">
+    <footer id="footer" class="footer">
     <div class="container">
       <div class="copyright text-center">
         <p>© <strong class="px-1 sitename">Arya Mehta</strong> — All Rights Reserved</p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href="#"><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/0_aryamehta_0/"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/arya-mehta-2849532a1/"><i class="bi bi-linkedin"></i></a>
         <a href="https://github.com/aryamehta0302"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/arya-mehta-2849532a1/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/0_aryamehta_0/"><i class="bi bi-instagram"></i></a>
+        <a href="https://facebook.com/"><i class="bi bi-facebook"></i></a>
         <a href="certification.html" title="Certifications"><i class="bi bi-patch-check"></i></a>
       </div>
     </div>
@@ -399,6 +332,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/v2.js"></script>
 
 </body>
 </html>
